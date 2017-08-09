@@ -1,0 +1,157 @@
+***********************************************************************************************************************
+
+D:\Sonar\sonarqube-4.5.1\sonarqube-4.5.1\bin\windows-x86-64\StartSonar.bat
+
+wrapper  | --> Wrapper Started as Console
+wrapper  | Launching a JVM...
+jvm 1    | Wrapper (Version 3.2.3) http://wrapper.tanukisoftware.org
+jvm 1    |   Copyright 1999-2006 Tanuki Software, Inc.  All Rights Reserved.
+jvm 1    |
+jvm 1    | 2017.08.04 17:19:04 INFO  app[o.s.p.m.JavaProcessLauncher] Launch process[search]: C:\Program Files\Java\jre1.8.0_60\bin\java -Djava.awt.he
+adless=true -Xmx256m -Xms256m -Xss256k -Djava.net.preferIPv4Stack=true -XX:+UseParNewGC -XX:+UseConcMarkSweepGC -XX:CMSInitiatingOccupancyFraction=75
+-XX:+UseCMSInitiatingOccupancyOnly -XX:+HeapDumpOnOutOfMemoryError -Djava.io.tmpdir=D:\Sonar\sonarqube-4.5.1\sonarqube-4.5.1\temp -cp ./lib/common/*;.
+/lib/search/* org.sonar.search.SearchServer C:\Users\MLAHAR~1\AppData\Local\Temp\sq-process3321667034797632463properties
+jvm 1    | 2017.08.04 17:19:16 INFO  app[o.s.p.m.Monitor] Process[search] is up
+jvm 1    | 2017.08.04 17:19:16 INFO  app[o.s.p.m.JavaProcessLauncher] Launch process[web]: C:\Program Files\Java\jre1.8.0_60\bin\java -Djava.awt.headl
+ess=true -Dfile.encoding=UTF-8 -Djruby.management.enabled=false -Xmx768m -XX:MaxPermSize=160m -XX:+HeapDumpOnOutOfMemoryError -Djava.io.tmpdir=D:\Sona
+r\sonarqube-4.5.1\sonarqube-4.5.1\temp -cp ./lib/common/*;./lib/server/* org.sonar.server.app.WebServer C:\Users\MLAHAR~1\AppData\Local\Temp\sq-proces
+s3382519310276487318properties
+jvm 1    | 2017.08.04 17:19:54 INFO  app[o.s.p.m.Monitor] Process[web] is up
+
+***********************************************************************************************************************
+
+D:\project\development\SpringBootDemandWebService>gradle sonarRunner
+Spring Boot plugin's support for Gradle 2.4 is deprecated. Please upgrade to Gradle 2.9 or later.
+:compileJava UP-TO-DATE
+:compileGroovy UP-TO-DATE
+:compileScala UP-TO-DATE
+:processResources UP-TO-DATE
+:classes UP-TO-DATE
+:compileTestJava UP-TO-DATE
+:compileTestGroovy UP-TO-DATE
+:compileTestScala UP-TO-DATE
+:processTestResources UP-TO-DATE
+:testClasses UP-TO-DATE
+:test UP-TO-DATE
+:sonarRunner
+SonarQube Runner 2.3
+Java 1.8.0_45 Oracle Corporation (64-bit)
+Windows 7 6.1 amd64
+INFO: Runner configuration file: NONE
+INFO: Project configuration file: D:\project\development\SpringBootDemandWebService\build\tmp\sonarRunner\sonar-project.properties
+INFO: Default locale: "en_US", source code encoding: "windows-1252" (analysis is platform dependent)
+INFO: Work directory: D:\project\development\SpringBootDemandWebService\build\sonar
+INFO: SonarQube Server 4.5.1
+17:20:11.057 INFO  - Load global referentials...
+17:20:11.712 INFO  - Load global referentials done: 658 ms
+17:20:11.740 INFO  - User cache: C:\Users\mlahariya\.sonar\cache
+17:20:11.757 INFO  - Install plugins
+17:20:12.311 INFO  - Install JDBC driver
+17:20:12.351 INFO  - Create JDBC datasource for jdbc:h2:tcp://localhost/sonar
+17:20:13.578 INFO  - Initializing Hibernate
+17:20:15.548 INFO  - Load project referentials...
+17:20:16.156 INFO  - Load project referentials done: 608 ms
+17:20:16.156 INFO  - Load project settings
+17:20:16.874 INFO  - Loading technical debt model...
+17:20:16.915 INFO  - Loading technical debt model done: 41 ms
+17:20:16.920 INFO  - Apply project exclusions
+17:20:17.206 WARN  - 'sonar.dynamicAnalysis' is deprecated since version 4.3 and should no longer be used.
+17:20:17.434 INFO  - -------------  Scan SpringBootDemandWebService
+17:20:17.467 INFO  - Load module settings
+17:20:18.351 INFO  - Loading rules...
+17:20:18.615 INFO  - Loading rules done: 264 ms
+17:20:18.660 INFO  - Configure Maven plugins
+17:20:18.776 INFO  - No quality gate is configured.
+17:20:19.074 INFO  - Base dir: D:\project\development\SpringBootDemandWebService
+17:20:19.074 INFO  - Working dir: D:\project\development\SpringBootDemandWebService\build\sonar
+17:20:19.080 INFO  - Source paths: src/main/resources, src/main/java
+17:20:19.080 INFO  - Test paths: src/test/java
+17:20:19.083 INFO  - Binary dirs: build/classes/main, build/resources/main
+17:20:19.083 INFO  - Source encoding: windows-1252, default locale: en_US
+17:20:19.083 INFO  - Index files
+17:20:19.442 INFO  - 65 files indexed
+17:20:20.318 INFO  - Quality profile for java: Sonar way
+17:20:20.356 INFO  - Sensor JavaSquidSensor...
+17:20:20.427 INFO  - Java Main Files AST scan...
+17:20:20.432 INFO  - 63 source files to be analyzed
+17:20:24.344 INFO  - 63/63 source files analyzed
+17:20:24.355 INFO  - Java Main Files AST scan done: 3928 ms
+17:20:24.361 INFO  - Java bytecode scan...
+17:20:24.530 INFO  - Java bytecode scan done: 169 ms
+17:20:24.531 INFO  - Java Test Files AST scan...
+17:20:24.531 INFO  - 2 source files to be analyzed
+17:20:24.542 INFO  - Java Test Files AST scan done: 11 ms
+17:20:24.557 INFO  - 2/2 source files analyzed
+17:20:24.564 INFO  - Package design analysis...
+17:20:24.830 INFO  - Package design analysis done: 266 ms
+17:20:25.108 INFO  - Sensor JavaSquidSensor done: 4751 ms
+17:20:25.109 INFO  - Sensor QProfileSensor...
+17:20:25.117 INFO  - Sensor QProfileSensor done: 8 ms
+17:20:25.118 INFO  - Sensor InitialOpenIssuesSensor...
+17:20:28.473 INFO  - Sensor InitialOpenIssuesSensor done: 3355 ms
+17:20:28.473 INFO  - Sensor ProjectLinksSensor...
+17:20:28.481 INFO  - Sensor ProjectLinksSensor done: 8 ms
+17:20:28.483 INFO  - Sensor VersionEventsSensor...
+17:20:28.496 INFO  - Sensor VersionEventsSensor done: 13 ms
+17:20:28.496 INFO  - Sensor FileHashSensor...
+17:20:28.502 INFO  - Sensor FileHashSensor done: 6 ms
+17:20:28.503 INFO  - Sensor SurefireSensor...
+17:20:28.504 INFO  - parsing D:\project\development\SpringBootDemandWebService\build\test-results
+17:20:28.784 INFO  - Sensor SurefireSensor done: 281 ms
+17:20:28.784 INFO  - Sensor JaCoCoSensor...
+17:20:28.791 INFO  - Analysing D:\project\development\SpringBootDemandWebService\build\jacoco\jacocoTest.exec
+17:20:28.903 INFO  - No information about coverage per test.
+17:20:28.903 INFO  - Sensor JaCoCoSensor done: 119 ms
+17:20:28.903 INFO  - Sensor CPD Sensor (wrapped)...
+17:20:28.904 INFO  - JavaCpdEngine is used for java
+17:20:28.910 INFO  - Cross-project analysis disabled
+17:20:29.137 INFO  - Sensor CPD Sensor (wrapped) done: 234 ms
+17:20:29.301 INFO  - Execute decorators...
+17:20:30.299 INFO  - Store results in database
+17:20:32.988 INFO  - ANALYSIS SUCCESSFUL, you can browse http://localhost:9000/dashboard/index/com.example:SpringBootDemandWebServiceApplication
+17:20:33.212 INFO  - Executing post-job class org.sonar.plugins.core.issue.notification.SendIssueNotificationsPostJob
+17:20:33.228 INFO  - Executing post-job class org.sonar.plugins.core.batch.IndexProjectPostJob
+17:20:34.260 INFO  - Executing post-job class org.sonar.plugins.dbcleaner.ProjectPurgePostJob
+17:20:34.278 INFO  - -> Keep one snapshot per day between 2017-07-07 and 2017-08-03
+17:20:34.279 INFO  - -> Keep one snapshot per week between 2016-08-05 and 2017-07-07
+17:20:34.279 INFO  - -> Keep one snapshot per month between 2012-08-10 and 2016-08-05
+17:20:34.279 INFO  - -> Delete data prior to: 2012-08-10
+17:20:34.295 INFO  - -> Clean SpringBootDemandWebService [id=4192]
+INFO: ------------------------------------------------------------------------
+INFO: EXECUTION SUCCESS
+INFO: ------------------------------------------------------------------------
+Total time: 25.036s
+Final Memory: 19M/729M
+INFO: ------------------------------------------------------------------------
+
+BUILD SUCCESSFUL
+
+Total time: 35.422 secs
+D:\project\development\SpringBootDemandWebService>
+
+***********************************************************************************************************************
+
+http://localhost:9000/
+http://localhost:9000/dashboard/index/4192
+
+***********************************************************************************************************************
+
+Username: admin
+Password: admin
+
+Dashboards--> Settings --> SYSTEM--> Bulk Deletion --> Select the projects --> delete.
+
+***********************************************************************************************************************
+
+Shutdown:-
+
+jvm 1    | 2017.08.04 17:19:54 INFO  app[o.s.p.m.Monitor] Process[web] is up
+wrapper  | CTRL-C trapped.  Shutting down.
+jvm 1    | 2017.08.04 17:31:34 INFO  app[o.s.p.m.TerminatorThread] Process[web] is stopping
+jvm 1    | 2017.08.04 17:31:40 INFO  app[o.s.p.m.TerminatorThread] Process[web] is stopped
+jvm 1    | 2017.08.04 17:31:40 INFO  app[o.s.p.m.TerminatorThread] Process[search] is stopping
+jvm 1    | 2017.08.04 17:31:41 INFO  app[o.s.p.m.TerminatorThread] Process[search] is stopped
+wrapper  | <-- Wrapper Stopped
+Terminate batch job (Y/N)? y
+
+***********************************************************************************************************************

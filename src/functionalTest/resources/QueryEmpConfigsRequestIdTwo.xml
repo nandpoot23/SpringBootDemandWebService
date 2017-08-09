@@ -1,0 +1,11 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:dm="http://dm.xml.soap.sample.com/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <dm:queryEmpConfigs>
+         <!--Optional:-->
+         <arg0>
+            <id>2</id>
+         </arg0>
+      </dm:queryEmpConfigs>
+   </soapenv:Body>
+</soapenv:Envelope>

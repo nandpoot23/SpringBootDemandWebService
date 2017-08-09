@@ -1,0 +1,288 @@
+buildscript {
+
+    ext {
+        springBootVersion = '1.4.2.RELEASE'
+        springCloudVersion = '1.0.2.RELEASE'
+        springFrameworkVersion = '4.3.3.RELEASE'
+    }
+
+    repositories {
+        mavenCentral()
+    }
+    
+    // In case of own repo then credentials will be fetch via gradle.properties 
+    //repositories {
+     //   mavenLocal()
+     //   maven {
+      //      url 'http://artifacts.my.own.net/'
+       //     credentials {
+        //        username = "${artifacts_user}"
+          //      password = "${artifacts_password}"
+          //  }
+       // }
+
+  // }
+    
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
+}
+
+apply plugin: 'sonar-runner'
+apply plugin: 'jacoco'
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'scala'
+apply plugin: 'groovy'
+apply plugin: 'org.springframework.boot'
+
+version = '0.0.1'
+
+jar {
+    baseName = 'SpringBootDemandWebService'
+    version = version
+}
+
+group = 'SpringBootDemandWebService'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+springBoot {
+    mainClass = "com.example.spring.boot.rest.app.SpringBootDemandWebServiceApplication"
+}
+
+sourceSets {
+    
+    // Defines where the Java sources and resources files of the integration tests are located.
+    integrationTest {
+        java {
+            srcDir file('src/integrationTest/java')
+        }
+        resources {
+            srcDir file('src/integrationTest/resources')
+        }
+    }
+
+}
+
+sourceSets {
+
+    // Defines where the Java sources and resources files of the e2e tests are located.
+    e2eTest {
+        java {
+            srcDir 'src/e2eTest/java'
+        }
+        resources {
+            srcDir 'src/e2eTest/resources'
+        }
+        compileClasspath += sourceSets.main.runtimeClasspath
+        compileClasspath += sourceSets.test.compileClasspath
+    }
+}
+
+sourceSets {
+
+    // Defines where the Java sources and resources files of the contract tests are located.
+    contractTest {
+        java {
+            srcDir 'src/contractTest/java'
+        }
+        resources {
+            srcDir 'src/contractTest/resources'
+        }
+        
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    compile('org.springframework.boot:spring-boot-starter-jdbc')
+    compile('org.springframework.boot:spring-boot-starter-web')
+    compile("org.springframework.boot:spring-boot-starter-ws") 
+    
+    // swagger
+    compile('io.springfox:springfox-swagger2:2.4.0')
+    //compile('io.springfox:springfox-swagger-ui:2.4.0')
+    
+    compile("wsdl4j:wsdl4j:1.6.1")
+
+    compile group: 'com.google.guava', name: 'guava', version: '18.0'
+    compile group: 'commons-lang', name: 'commons-lang', version: '2.6'
+    compile group: 'commons-collections', name: 'commons-collections', version: '3.2.1'
+    compile group: 'org.mockito', name: 'mockito-all', version: '1.10.19'
+    compile group: 'org.mockito', name: 'mockito-core', version: '1.10.19'
+    compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.4'
+    compile group: 'org.apache.ws.security', name: 'wss4j', version: '1.6.18'
+    
+    // validation aspect
+    compile group: 'commons-beanutils', name: 'commons-beanutils', version: '1.9.2'
+    compile group: 'commons-validator', name: 'commons-validator', version: '1.3.1'
+    
+    // reflection
+    compile group: 'org.reflections', name: 'reflections', version: '0.9.10'
+    
+    // powermock
+    testCompile('org.powermock:powermock-mockito-release-full:1.6.2')
+    
+    // e2e
+    compile group: 'com.jayway.restassured', name: 'rest-assured', version: '2.4.1'
+    compile group: 'com.jayway.restassured', name: 'rest-assured-common', version: '2.4.1'
+    
+    
+    // contract & functional test
+    compile("com.jayway.restassured:spring-mock-mvc:2.9.0")
+    compile("org.apache.httpcomponents:fluent-hc:4.5")
+    compile("org.yaml:snakeyaml:1.15")
+    compile("com.google.guava:guava:18.0")
+    compile group: 'com.github.dreamhead', name: 'moco-runner', version: '0.9'
+    compile group: 'com.github.dreamhead', name: 'moco-core', version: '0.11.0'
+    compile group: 'org.bitbucket.b_c', name: 'jose4j', version: '0.4.4'
+    
+    // aop
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-aop', version: '1.4.2.RELEASE'
+    
+    // spring actuator
+    compile("org.springframework.boot:spring-boot-starter-actuator")
+    
+    runtime('mysql:mysql-connector-java')
+    testCompile('org.springframework.boot:spring-boot-starter-test')
+    
+    // Add the output of the main and test source sets so that the integration tests
+    // have access to the compiled classes to run tests against
+    integrationTestCompile sourceSets.main.output
+    integrationTestCompile sourceSets.test.output
+
+    // Configures the dependency reusing those of the 'test' task.
+    // This will allow reusage of JUnit and other mock libraries for instance
+    integrationTestCompile configurations.testCompile
+    integrationTestRuntime configurations.testRuntime
+    
+     // Adding for the contract test but it is not working
+    contractTestCompile sourceSets.main.output
+    contractTestCompile sourceSets.test.output
+
+    // Configures the dependency reusing for contract test but it is not working
+    contractTestCompile configurations.testCompile
+    contractTestRuntime configurations.testRuntime
+    
+}
+
+task wrapper(type: Wrapper) {
+   gradleVersion = '2.14.1'
+}
+
+bootRun {
+    systemProperties = System.properties
+}
+
+// Extend the Test task
+task integrationTest(type: Test) {
+
+    // Generated reports and execution files for JUnit will be copied in these directories
+    reports.junitXml.destination = file("$buildDir/integration-test-results/")
+    reports.html.destination = file("$buildDir/integration-test-results/")
+
+    // Adds the integration tests classes to the test suite along with the runtime classpath
+    testClassesDir = sourceSets.integrationTest.output.classesDir
+    classpath += sourceSets.integrationTest.runtimeClasspath
+
+    // Enable the System.out if you want
+    testLogging.showStandardStreams = true
+
+    // Before each test, log the execution detail for clarity
+    beforeTest { descriptor ->
+        logger.lifecycle("Running test: " + descriptor)
+    }
+
+}
+
+// When executing the task 'check', we now force the execution of integration tests as well
+check.dependsOn -= integrationTest
+
+// Running integration tests requires that unit tests are executed first
+integrationTest.dependsOn test
+
+test {
+    jacoco {
+        destinationFile = file("$buildDir/jacoco/jacocoTest.exec")
+    }
+}
+
+task e2eTest(type: Test) {
+
+   // we can provide the below line maually but this is not the correct way because every time 
+   // we need to change according to the specific environment.
+    //systemProperty "spring.profiles.active", "dm-local"
+    systemProperties = System.properties
+    // Generated reports and execution files for e2e will be copied in these directories
+    reports.junitXml.destination = file("$buildDir/e2e-test-results/")
+    reports.html.destination = file("$buildDir/e2e-test-results/")
+
+    description = "Runs End to End Tests"
+    testClassesDir = sourceSets.e2eTest.output.classesDir
+    classpath += sourceSets.e2eTest.runtimeClasspath
+}
+
+task contractTest(type: Test) {
+    
+    //systemProperty "spring.config.location", "moco-override.properties"
+    systemProperties = System.properties
+
+    // Generated reports and execution files for JUnit will be copied in these directories
+    systemProperties = System.properties
+    reports.junitXml.destination = file("$buildDir/contract-test-results/")
+    reports.html.destination = file("$buildDir/contract-test-results/")
+
+    description = "Runs contractTest using moco server"
+    description 'Tests the contract aspects of service operations against Moco stubs and ensures the interface returns the expected fields.'
+    testClassesDir = sourceSets.contractTest.output.classesDir
+    classpath += sourceSets.contractTest.runtimeClasspath
+}
+
+// Performance Gatling test classes to run
+def perfTestSuite = 
+    ["com.example.dm.customer.performance.QueryEmpConfigsTest",
+    "com.example.dm.customer.performance.SelectAllEmpAllDataTest"
+    ]
+
+// Settings for local performance test
+ext.localPerfTestOptions = [
+        "warmUpURL"              : "http://localhost:6062/mappings",
+        "additionalSysProperties": ["-Ddm.serviceURL=http://localhost:6062",
+                                    "-Ddm.testProfile=com.example.dm.customer.performance.StubProfile"],
+        "suite"                  : perfTestSuite
+]
+    
+// Properties to override when running contract/functional/performance tests
+// (generally, we want to point to localhost and start Moco for stubbing)
+//dmArtifactOptions.additionalIncludes = ["moco-override.properties"]
+
+// The jar to start when running contractTest, functionalTest etc.
+// Note: The override properties force the server to start up with endpoints
+// pointing to localhost.  Moco then will expect/return responses based
+// on the service calling itself.
+ext.jarPath = "-Dspring.config.location=moco-override.properties build/libs/SpringBootDemandWebService-0.0.1.jar"
+
+// sonar setup
+sonarRunner {
+    sonarProperties {
+        property "sonar.projectKey", "com.example:SpringBootDemandWebServiceApplication"
+        property "sonar.projectName", "SpringBootDemandWebService"
+        //property "sonar.host.url", "http://10.22.88.84:9000"
+        property "sonar.host.url", "http://localhost:9000"
+        //property "sonar.login", "admin"
+        //property "sonar.password", "admin"
+        //property "sonar.jdbc.url", "jdbc:mysql://10.22.88.83:3406/sonar"
+        //property "sonar.jdbc.driverClassName", "com.mysql.jdbc.Driver"
+        property "sonar.jdbc.username", "sonar"
+        property "sonar.jdbc.password", "sonar"
+        property "sonar.jacoco.reportPath", "$buildDir/jacoco/jacocoTest.exec"
+        //property "sonar.exclusions", "**/types/**,**/dao/**,**/db/hibernate/**,**/connector/data/**,**/util/guid**,**/config/**,**/db/model/**,**Mapper**.java,**/ValidationAspect.java,**/DBQueryConstants.java"
+    }
+
+}

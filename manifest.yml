@@ -1,0 +1,24 @@
+---
+
+env:
+  SPRING_CLOUD_CONFIG_URI: "https://mycustomer-configserver.mysampleapp.cloud.own.net"
+  GSP_CONFIG_SERVER_USERNAME: dm_config_client
+  GSP_CONFIG_SERVER_PASSWORD: radhakrishna
+  SPRING_CLOUD_CONFIG_LABEL: develop
+  SPRING_PROFILES_ACTIVE: dm-qa
+
+applications:
+  - name: dm-service-dev-test
+    memory: 2048M
+    timeout: 600
+    host: dm-service-dev
+
+services:
+  - app-dynamics-service
+  - ars-config-bus
+  - Services_log
+
+instances: 2
+
+env:
+  JAVA_OPTS: "-Dappdynamics.agent.applicationName=DM-v6-DEV -Dappdynamics.agent.tierName=dm-service-dev -Dappdynamics.http.proxyHost=proxy-appd-lower.sys.myown.net -Dappdynamics.http.proxyPort=3128 -Duser.timezone=America/New_York "

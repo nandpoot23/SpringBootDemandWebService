@@ -1,0 +1,166 @@
+    
+  <div class="col-sm-12 col-md-12 border">
+	<table class="table table-hover table-condensed">
+	    <tr>
+	        <th>Uptime</th>
+	        <th>Memory</th>
+	        <th>Heap</th>
+	        <th>Threads</th>
+	        <th>Classes</th>
+	    </tr>
+	    <tr class="" ng-if="details">
+	        <td>
+	            <table class="table table-hover table-condensed">
+		        <tr><td>Uptime<td><td>{{details.uptime}}<td><tr>
+		        <tr><td>Instance Uptime<td><td>{{details.instanceuptime}}<td><tr>
+		        </table>
+	        </td>
+	        <td>
+	            <table class="table table-hover table-condensed">
+		        <tr><td>Memory Total<td><td>{{details.mem}}<td><tr>
+		        <tr><td>Memory Free<td><td>{{details.memfree}}<td><tr>
+		        </table>
+	        <td>
+	            <table class="table table-hover table-condensed">
+		        <tr><td>Heap Total<td><td>{{details.heap}}<td><tr>
+		        <tr><td>Heap Committed<td><td>{{details.heapcommitted}}<td><tr>
+		        <tr><td>Heap Init<td><td>{{details.heapinit}}<td><tr>
+		        <tr><td>Heap Used<td><td>{{details.heapused}}<td><tr>
+		        </table>
+	        </td>
+	        <td>
+	            <table class="table table-hover table-condensed">
+		        <tr><td>Threads Current<td><td>{{details.threads}}<td><tr>
+		        <tr><td>Threads Peak<td><td>{{details.threadspeak}}<td><tr>
+		        <tr><td>Threads Daemon<td><td>{{details.threadsdaemon}}<td><tr>
+		        </table>
+	        </td>
+	        <td>
+	            <table class="table table-hover table-condensed">
+		        <tr><td>Classes<td><td>{{details.classes}}<td><tr>
+		        <tr><td>Classes Loaded<td><td>{{details.classesloaded}}<td><tr>
+		        <tr><td>Classes UnLoaded<td><td>{{details.classesunloaded}}<td><tr>
+		        </table>
+	        </td>
+	    </tr>
+	    <tr ng-if="!details" class="error">
+	        <td colspan="6">
+	            No Properties Details
+	        </td>
+	    </tr>
+	</table>
+    </div>
+  
+   
+    <div class="col-sm-12 col-md-12 border" >
+	  <table class="table table-hover table-condensed" >
+	    <caption>Counts</caption>
+	    
+	    <tr>
+	  <!--   <th>Class</th>   -->    
+	        <th class="col-sm-3"></th>
+	        <th class="col-sm-1"></th>
+	        <th class="col-sm-1" colspan="4">Rates By Minute</th>
+	        <th class="col-sm-1" colspan="5">Percentile Response Times</th>
+	    </tr>
+	    <tr>
+	  <!--   <th>Class</th>   -->    
+	        <th class="col-sm-3">Method</th>
+	        <th class="col-sm-1">Count</th>
+	        <th class="col-sm-1">1 Min</th>
+	        <th class="col-sm-1">5 Min</th>
+	        <th class="col-sm-1">15 Min</th>
+	        <th class="col-sm-1">Mean</th>
+	        
+	        <th class="col-sm-1">75th</th>
+	        <th class="col-sm-1">95th</th>
+	        <th class="col-sm-1">98th</th>
+	        <th class="col-sm-1">99th</th>
+	        <th class="col-sm-1">999th</th>
+	    </tr>
+	    <tr class="" ng-if="details"  ng-repeat="t in details.timers">
+	   <!--        <td>{{t.method2}}</td>  -->
+	        <td>{{t.method1}}</td>
+	        <td>{{t.count}}</td>
+	        <td>{{t.oneMinuteRate}}</td>
+	        <td>{{t.fiveMinuteRate}}</td>
+	        <td>{{t.fifteenMinuteRate}}</td>
+	        <td>{{t.meanRate}}</td>
+	        
+	        <td>{{t.snapshot_75thPercentile}}</td>
+	        <td>{{t.snapshot_95thPercentile}}</td>
+	        <td>{{t.snapshot_98thPercentile}}</td>
+	        <td>{{t.snapshot_99thPercentile}}</td>
+	        <td>{{t.snapshot_999thPercentile}}</td>
+	    </tr>
+	    <tr ng-if="!details && details.timers.length < 1" class="error">
+	        <td colspan="10">
+	            No timers configured
+	        </td>
+	    </tr>
+	  </table>
+    
+    </div>
+  
+ <!-- 
+ 
+ "count","oneMinuteRate", "fiveMinuteRate", "fifteenMinuteRate", "meanRate",
+	        	                 "snapshot.75thPercentile", "snapshot.95thPercentile", 
+	        	                 "snapshot.98thPercentile", "snapshot.99thPercentile",
+	        	                 "snapshot.999thPercentile",
+	        	                 "snapshot.max", "snapshot.mean", "snapshot.median", 
+	        	                 "snapshot.min", "snapshot.stdDev"
+ 
+    <div class="col-xs-12 col-md-8 border">
+	<table class="table table-hover table-condensed">
+	    <tr>
+	        <th>DataCenter</th>
+	        <th>Domain</th>
+	        <th>Farm</th>
+	        <th>SoakPort</th>
+	        <th>ConsoleUrl</th>
+	        <th>Search?</th>
+	    </tr>
+	    <tr class="" ng-if="domainentries" ng-repeat="de in domainentries">
+	        <td>{{de.DataCenter}}</td>
+	        <td>{{de.Domain}}</td>
+	        <td>{{de.Farm}}</td>
+	        <td>{{de.SoakPort}}</td>
+	        <td>{{de.ConsoleUrl}}</td>
+	        <td><a class="" href="" ng-href="#/weblogic-consoles/{{de.guid}}" role="">Link</a></td>
+	    </tr>
+	    <tr ng-if="!domainentries || domainentries.length < 1" class="error">
+	        <td colspan="6">
+	            No domain entries - Are your properties configured?
+	        </td>
+	    </tr>
+	</table>
+    </div>
+
+
+    <div class="col-xs-6 col-md-3 border">
+	<form class="form-horizontal" role="form" ng-submit="jmxSearch()">
+	    <div class="">
+	        <div>
+	           <label for="services" class="control-label">Service Name Search:</label>
+	        </div>
+	               
+	        <div class="">
+	        <input type="text" class="input-sm form-control" id="services" 
+	          required="required" onerror="text"
+	            		placeholder="enter service name here" ng-model="jmxQuery.services">
+	        </div>    		
+	    </div>
+	    <div class="form-group">
+	        <div class="col-sm-5 col-xs-5 col-md-5">
+	            <button type="submit" class="btn btn-default">Query</button>
+	        </div>
+	    </div>
+	</form>
+    </div>
+ -->
+
+
+<BR></BR>
+<BR></BR>
+<BR></BR>

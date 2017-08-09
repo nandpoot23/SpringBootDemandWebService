@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html ng-app="todoapp">
+<head>
+	<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <title>Weblogic Deployment Checker</title>
+    <link rel="stylesheet" href="/css/bootstrap3.min.css">
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+<div class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/" ng-href="#/" role="">Home</a>
+            <a class="navbar-brand" href="/" ng-href="#/reports/metrics" role="">Metrics</a>
+            <a class="navbar-brand" href="/" ng-href="#/reports/caches" role="">Caches</a>
+            <!-- 
+            <a class="navbar-brand" href="/numeritrack/block-states" ng-href="#/numeritrack/block-states" role="">NT Block States</a>
+            <a class="navbar-brand" href="/numeritrack/rc-lookup" ng-href="#/numeritrack/rc-lookup" role="">NT Rc Lookups</a>
+             -->
+        </div>
+    </div>
+</div>
+
+<div class="container" ng-view="">
+
+
+</div>  
+
+<div class="navbar navbar-default navbar-bottom">
+<div class="container-fluid">(C) 2016</div> 
+</div>
+
+<script src="/js/jquery.js"></script>
+<script src="/js/angular.js"></script>
+<script src="/js/angular-route.js"></script>
+<script src="/js/angular-cookies.js"></script>
+<script src="/js/angular-sanitize.js"></script>
+<script src="/js/angular-resource.js"></script>
+
+<script src="/scripts/app.js"></script>
+</body>
+</html>

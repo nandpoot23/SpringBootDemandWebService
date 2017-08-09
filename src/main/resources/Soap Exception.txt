@@ -1,0 +1,89 @@
+***********************************************************************************************************************
+
+<env:Envelope xmlns:env="http://schemas.xmlsoap.org/soap/envelope/">
+   <env:Header/>
+   <env:Body>
+      <env:Fault xmlns:fault="http://schemas.xmlsoap.org/soap/envelope/">
+         <faultcode>fault:Client</faultcode>
+         <faultstring>An error occurred. Please check the detail section. [ASPECTS: (server=espapp-dt-a5q.ula.comcast.net,service=CustomerService,version=15.09,operation=manageProduct,user=rouser,sourceSystemId=abcde,messageId=null,trackingId=abcde)]</faultstring>
+         <detail>
+            <e:serviceFault xmlns:e="http://xml.comcast.com/types">
+               <e:messages>
+                  <e:message>
+                     <e:code>CUSTOMER-31554</e:code>
+                     <e:text>Validation Error: CM_MAC value entered MATI1:74:50:76:C7 should match the regular expression ^([0-9a-fA-F][0-9a-fA-F]:){5}([0-9a-fA-F][0-9a-fA-F])$.</e:text>
+                  </e:message>
+               </e:messages>
+            </e:serviceFault>
+         </detail>
+      </env:Fault>
+   </env:Body>
+</env:Envelope>
+
+***********************************************************************************************************************
+
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+   <SOAP-ENV:Header/>
+   <SOAP-ENV:Body>
+      <SOAP-ENV:Fault>
+         <faultcode>SOAP-ENV:Client</faultcode>
+         <faultstring xml:lang="en">An error occurred. Please check the detail section. [ASPECTS: (logcontrol-all=false,service=customer-service,serviceVersion=15.09,sourceServerId=abcde,sourceSystemId=abcde,sourceSystemUserId=abcde,timestamp=2013-05-02T11:45:41.131Z,trackingId=abcde)]</faultstring>
+         <detail>
+            <ns2:serviceFault xmlns:ns2="http://xml.comcast.com/types">
+               <ns2:messages>
+                  <ns2:message>
+                     <ns2:code>CUSTOMER-31554</ns2:code>
+                     <ns2:text>Validation Error: CM_MAC value entered MATI1:74:50:76:C7 should match the regular expression ^([0-9a-fA-F][0-9a-fA-F]:){5}([0-9a-fA-F][0-9a-fA-F])$.</ns2:text>
+                  </ns2:message>
+               </ns2:messages>
+            </ns2:serviceFault>
+         </detail>
+      </SOAP-ENV:Fault>
+   </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
+
+***********************************************************************************************************************
+
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+   <SOAP-ENV:Header/>
+   <SOAP-ENV:Body>
+      <SOAP-ENV:Fault>
+         <faultcode>SOAP-ENV:Client</faultcode>
+         <faultstring xml:lang="en">An error occurred. Please check the detail section. [ASPECTS: ()]</faultstring>
+         <detail>
+            <serviceFault>
+               <messages>
+                  <message>
+                     <code>CUSTOMER-1001</code>
+                     <text>Dm Error: Not supported CustomerProfileCategory in request</text>
+                  </message>
+               </messages>
+            </serviceFault>
+         </detail>
+      </SOAP-ENV:Fault>
+   </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
+
+***********************************************************************************************************************
+
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+   <SOAP-ENV:Header/>
+   <SOAP-ENV:Body>
+      <SOAP-ENV:Fault>
+         <faultcode>SOAP-ENV:Client</faultcode>
+         <faultstring xml:lang="en">An error occurred. Please check the detail section. [ASPECTS: ()]</faultstring>
+         <detail>
+            <serviceFault>
+               <messages>
+                  <message>
+                     <code>CUSTOMER-1005</code>
+                     <text>Dm Error: please provide the valid id</text>
+                  </message>
+               </messages>
+            </serviceFault>
+         </detail>
+      </SOAP-ENV:Fault>
+   </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
+
+***********************************************************************************************************************

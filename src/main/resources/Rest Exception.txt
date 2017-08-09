@@ -1,0 +1,30 @@
+***********************************************************************************************************************
+
+{
+   "message": "Unable to validate service method call.",
+   "timestamp": 1483018896980,
+   "type": "java.lang.RuntimeException",
+   "status": "INTERNAL_SERVER_ERROR"
+}
+
+***********************************************************************************************************************
+
+{
+   "message": "Dm Error: Not supported CustomerProfileCategory in request",
+   "code": "CUSTOMER-1001",
+   "timestamp": 1483018928834,
+   "type": "com.example.spring.boot.rest.exception.ErrorResponse",
+   "status": "INTERNAL_SERVER_ERROR"
+}
+
+***********************************************************************************************************************
+
+{
+  "message": "Dm Error: please provide the valid id",
+  "code": "CUSTOMER-1005",
+  "timestamp": 1483073954691,
+  "type": "com.example.spring.boot.rest.exception.ErrorResponse",
+  "status": "INTERNAL_SERVER_ERROR"
+}
+
+***********************************************************************************************************************

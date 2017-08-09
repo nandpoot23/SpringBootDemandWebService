@@ -1,0 +1,130 @@
+***********************************************************************************************************************
+
+Service Level:-
+
+16:16:34.457 [http-nio-6062-exec-1] DEBUG o.s.w.t.h.MessageDispatcherServlet - Initializing servlet 'messageDispatcherServlet'
+16:16:34.460 [http-nio-6062-exec-1] DEBUG o.s.w.c.s.StandardServletEnvironment - Adding [servletConfigInitParams] PropertySource with lowest search precedence
+16:16:34.460 [http-nio-6062-exec-1] DEBUG o.s.w.c.s.StandardServletEnvironment - Adding [servletContextInitParams] PropertySource with lowest search precedence
+16:16:34.460 [http-nio-6062-exec-1] DEBUG o.s.w.c.s.StandardServletEnvironment - Adding [systemProperties] PropertySource with lowest search precedence
+16:16:34.460 [http-nio-6062-exec-1] DEBUG o.s.w.c.s.StandardServletEnvironment - Adding [systemEnvironment] PropertySource with lowest search precedence
+16:16:34.460 [http-nio-6062-exec-1] DEBUG o.s.w.c.s.StandardServletEnvironment - Initialized StandardServletEnvironment with PropertySources [servletConfigInitParams,servletContextInitParams,systemProperties,systemEnvironment]
+16:16:34.461 [http-nio-6062-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'messageDispatcherServlet'
+16:16:34.461 [http-nio-6062-exec-1] INFO  o.s.w.t.h.MessageDispatcherServlet - FrameworkServlet 'messageDispatcherServlet': initialization started
+16:16:34.479 [http-nio-6062-exec-1] INFO  o.s.w.s.saaj.SaajSoapMessageFactory - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+16:16:34.491 [http-nio-6062-exec-1] DEBUG o.s.w.s.saaj.SaajSoapMessageFactory - Using MessageFactory class [com.sun.xml.internal.messaging.saaj.soap.ver1_1.SOAPMessageFactory1_1Impl]
+16:16:34.491 [http-nio-6062-exec-1] DEBUG o.s.w.t.h.MessageDispatcherServlet - No WebServiceMessageFactory found in servlet 'messageDispatcherServlet': using default
+16:16:34.499 [http-nio-6062-exec-1] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'defaultMethodEndpointAdapter'
+16:16:34.499 [http-nio-6062-exec-1] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'soapFaultAnnotationExceptionResolver'
+16:16:34.499 [http-nio-6062-exec-1] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'simpleSoapExceptionResolver'
+16:16:34.500 [http-nio-6062-exec-1] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'payloadRootAnnotationMethodEndpointMapping'
+16:16:34.500 [http-nio-6062-exec-1] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'soapActionAnnotationMethodEndpointMapping'
+16:16:34.500 [http-nio-6062-exec-1] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'annotationActionEndpointMapping'
+16:16:34.500 [http-nio-6062-exec-1] DEBUG o.s.w.t.h.MessageDispatcherServlet - No MessageDispatcher found in servlet 'messageDispatcherServlet': using default
+16:16:34.501 [http-nio-6062-exec-1] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean '1.0'
+16:16:34.501 [http-nio-6062-exec-1] DEBUG o.s.w.t.h.MessageDispatcherServlet - Published [SimpleWsdl11Definition class path resource [wsdl/1.0/mathsdbservice.wsdl]] as 1.0.wsdl
+16:16:34.502 [http-nio-6062-exec-1] DEBUG o.s.w.t.h.MessageDispatcherServlet - Published WebApplicationContext of servlet 'messageDispatcherServlet' as ServletContext attribute with name [org.springframework.web.servlet.FrameworkServlet.CONTEXT.messageDispatcherServlet]
+16:16:34.502 [http-nio-6062-exec-1] INFO  o.s.w.t.h.MessageDispatcherServlet - FrameworkServlet 'messageDispatcherServlet': initialization completed in 41 ms
+16:16:34.502 [http-nio-6062-exec-1] DEBUG o.s.w.t.h.MessageDispatcherServlet - Servlet 'messageDispatcherServlet' configured successfully
+16:16:34.523 [http-nio-6062-exec-1] DEBUG o.s.w.t.h.WebServiceMessageReceiverHandlerAdapter - Accepting incoming [org.springframework.ws.transport.http.HttpServletConnection@1c84ef66] at [http://localhost:6062/DmService/1.0]
+16:16:34.683 [http-nio-6062-exec-1] DEBUG o.s.w.server.MessageTracing.received - Received request [SaajSoapMessage {http://dm.xml.soap.sample.com/}queryEmpConfigs]
+16:16:34.695 [http-nio-6062-exec-1] DEBUG o.s.w.s.e.m.PayloadRootAnnotationMethodEndpointMapping - Looking up endpoint for [{http://dm.xml.soap.sample.com/}queryEmpConfigs]
+16:16:34.696 [http-nio-6062-exec-1] DEBUG o.s.w.s.server.SoapMessageDispatcher - Endpoint mapping [org.springframework.ws.server.endpoint.mapping.PayloadRootAnnotationMethodEndpointMapping@efe0439] maps request to endpoint [public com.sample.soap.xml.dm.QueryEmpConfigsResponse com.example.spring.boot.soap.controller.DmSoapServiceController.queryEmpConfigs(com.sample.soap.xml.dm.QueryEmpConfigs,org.springframework.ws.context.MessageContext) throws java.lang.Exception]
+16:16:34.697 [http-nio-6062-exec-1] DEBUG o.s.w.s.server.SoapMessageDispatcher - Testing endpoint adapter [org.springframework.ws.server.endpoint.adapter.DefaultMethodEndpointAdapter@2f9efe75]
+16:16:34.992 [http-nio-6062-exec-1] DEBUG o.s.w.s.e.a.m.j.XmlRootElementPayloadMethodProcessor - Unmarshalled payload request to [com.sample.soap.xml.dm.QueryEmpConfigs@4e2dbbdc]
+16:16:34.992 [http-nio-6062-exec-1] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'DmSoapServiceController'
+16:16:34.992 [http-nio-6062-exec-1] INFO  c.e.s.b.s.c.DmSoapServiceController - SOAP Request Received Of queryCustomer com.sample.soap.xml.dm.QueryEmpConfigs@4e2dbbdc
+16:16:34.993 [http-nio-6062-exec-1] DEBUG c.e.s.b.rest.service.DmServiceImpl - MyServiceImpl::queryEmpConfigs  id : 1
+16:16:35.008 [http-nio-6062-exec-1] DEBUG o.s.jdbc.core.JdbcTemplate - Executing prepared SQL query
+16:16:35.009 [http-nio-6062-exec-1] DEBUG o.s.jdbc.core.JdbcTemplate - Executing prepared SQL statement [select * from employee where id = ?]
+16:16:35.009 [http-nio-6062-exec-1] DEBUG o.s.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+16:16:35.095 [http-nio-6062-exec-1] DEBUG o.s.jdbc.datasource.DataSourceUtils - Returning JDBC Connection to DataSource
+16:16:35.095 [http-nio-6062-exec-1] DEBUG c.e.s.boot.rest.dao.DmDbServiceImpl -  Query for queryEmpConfigs : select * from employee where id = ?
+16:16:35.100 [http-nio-6062-exec-1] DEBUG c.e.s.b.s.c.DmSoapServiceController - Returning Response for queryEmpConfigs
+16:16:35.103 [http-nio-6062-exec-1] DEBUG o.s.w.s.e.a.m.j.XmlRootElementPayloadMethodProcessor - Marshalling [com.sample.soap.xml.dm.QueryEmpConfigsResponse@2ddfd7ba] to response payload
+16:16:35.217 [http-nio-6062-exec-1] DEBUG o.s.ws.server.MessageTracing.sent - Sent response [SaajSoapMessage {http://dm.xml.soap.sample.com/}queryEmpConfigsResponse] for request [SaajSoapMessage {http://dm.xml.soap.sample.com/}queryEmpConfigs]
+16:16:35.300 [http-nio-6062-exec-1] DEBUG o.s.w.t.h.MessageDispatcherServlet - Successfully completed request
+
+***********************************************************************************************************************
+
+Unit Level:-
+
+16:16:32.241 [main] DEBUG i.n.u.i.l.InternalLoggerFactory - Using SLF4J as the default logging framework
+16:16:32.244 [main] DEBUG i.n.c.MultithreadEventLoopGroup - -Dio.netty.eventLoopThreads: 8
+16:16:32.274 [main] DEBUG i.n.util.internal.PlatformDependent0 - java.nio.Buffer.address: available
+16:16:32.275 [main] DEBUG i.n.util.internal.PlatformDependent0 - sun.misc.Unsafe.theUnsafe: available
+16:16:32.275 [main] DEBUG i.n.util.internal.PlatformDependent0 - sun.misc.Unsafe.copyMemory: available
+16:16:32.275 [main] DEBUG i.n.util.internal.PlatformDependent0 - java.nio.Bits.unaligned: true
+16:16:32.276 [main] DEBUG i.n.util.internal.PlatformDependent - Platform: Windows
+16:16:32.276 [main] DEBUG i.n.util.internal.PlatformDependent - Java version: 8
+16:16:32.276 [main] DEBUG i.n.util.internal.PlatformDependent - -Dio.netty.noUnsafe: false
+16:16:32.277 [main] DEBUG i.n.util.internal.PlatformDependent - sun.misc.Unsafe: available
+16:16:32.277 [main] DEBUG i.n.util.internal.PlatformDependent - -Dio.netty.noJavassist: false
+16:16:32.418 [main] DEBUG i.n.util.internal.PlatformDependent - Javassist: available
+16:16:32.418 [main] DEBUG i.n.util.internal.PlatformDependent - -Dio.netty.tmpdir: C:\Users\MLAHAR~1\AppData\Local\Temp (java.io.tmpdir)
+16:16:32.418 [main] DEBUG i.n.util.internal.PlatformDependent - -Dio.netty.bitMode: 64 (sun.arch.data.model)
+16:16:32.419 [main] DEBUG i.n.util.internal.PlatformDependent - -Dio.netty.noPreferDirect: false
+16:16:32.439 [main] DEBUG io.netty.channel.nio.NioEventLoop - -Dio.netty.noKeySetOptimization: false
+16:16:32.439 [main] DEBUG io.netty.channel.nio.NioEventLoop - -Dio.netty.selectorAutoRebuildThreshold: 512
+16:16:32.508 [main] DEBUG i.n.util.internal.ThreadLocalRandom - -Dio.netty.initialSeedUniquifier: 0x6195a9f12ae63d15 (took 8 ms)
+16:16:32.547 [main] DEBUG io.netty.buffer.ByteBufUtil - -Dio.netty.allocator.type: unpooled
+16:16:32.547 [main] DEBUG io.netty.buffer.ByteBufUtil - -Dio.netty.threadLocalDirectBufferSize: 65536
+16:16:32.677 [main] DEBUG io.netty.util.NetUtil - Loopback interface: lo (Software Loopback Interface 1, 127.0.0.1)
+16:16:32.678 [main] DEBUG io.netty.util.NetUtil - \proc\sys\net\core\somaxconn: 200 (non-existent)
+16:16:34.170 [main] DEBUG o.a.h.i.c.BasicClientConnectionManager - Get connection for route {}->http://localhost:6062
+16:16:34.184 [main] DEBUG o.a.h.i.c.DefaultClientConnectionOperator - Connecting to localhost:6062
+16:16:34.356 [main] DEBUG o.a.h.c.protocol.RequestAddCookies - CookieSpec selected: ignoreCookies
+16:16:34.359 [main] DEBUG o.a.h.c.protocol.RequestAuthCache - Auth cache not set in the context
+16:16:34.359 [main] DEBUG o.a.h.c.p.RequestTargetAuthentication - Target auth state: UNCHALLENGED
+16:16:34.360 [main] DEBUG o.a.h.c.p.RequestProxyAuthentication - Proxy auth state: UNCHALLENGED
+16:16:34.361 [main] DEBUG o.a.h.impl.client.DefaultHttpClient - Attempt 1 to execute request
+16:16:34.361 [main] DEBUG o.a.h.i.conn.DefaultClientConnection - Sending request: POST /DmService/1.0 HTTP/1.1
+16:16:34.362 [main] DEBUG org.apache.http.wire -  >> "POST /DmService/1.0 HTTP/1.1[\r][\n]"
+16:16:34.364 [main] DEBUG org.apache.http.wire -  >> "Accept: */*[\r][\n]"
+16:16:34.365 [main] DEBUG org.apache.http.wire -  >> "Content-Type: text/xml; charset=ISO-8859-1[\r][\n]"
+16:16:34.365 [main] DEBUG org.apache.http.wire -  >> "Content-Length: 343[\r][\n]"
+16:16:34.365 [main] DEBUG org.apache.http.wire -  >> "Host: localhost:6062[\r][\n]"
+16:16:34.365 [main] DEBUG org.apache.http.wire -  >> "Connection: Keep-Alive[\r][\n]"
+16:16:34.365 [main] DEBUG org.apache.http.wire -  >> "User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_60)[\r][\n]"
+16:16:34.365 [main] DEBUG org.apache.http.wire -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
+16:16:34.365 [main] DEBUG org.apache.http.wire -  >> "[\r][\n]"
+16:16:34.365 [main] DEBUG org.apache.http.headers - >> POST /DmService/1.0 HTTP/1.1
+16:16:34.366 [main] DEBUG org.apache.http.headers - >> Accept: */*
+16:16:34.366 [main] DEBUG org.apache.http.headers - >> Content-Type: text/xml; charset=ISO-8859-1
+16:16:34.366 [main] DEBUG org.apache.http.headers - >> Content-Length: 343
+16:16:34.366 [main] DEBUG org.apache.http.headers - >> Host: localhost:6062
+16:16:34.366 [main] DEBUG org.apache.http.headers - >> Connection: Keep-Alive
+16:16:34.366 [main] DEBUG org.apache.http.headers - >> User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_60)
+16:16:34.366 [main] DEBUG org.apache.http.headers - >> Accept-Encoding: gzip,deflate
+16:16:34.367 [main] DEBUG org.apache.http.wire -  >> "<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:dm="http://dm.xml.soap.sample.com/">[\r][\n]"
+16:16:34.367 [main] DEBUG org.apache.http.wire -  >> "   <soapenv:Header/>[\r][\n]"
+16:16:34.367 [main] DEBUG org.apache.http.wire -  >> "   <soapenv:Body>[\r][\n]"
+16:16:34.367 [main] DEBUG org.apache.http.wire -  >> "      <dm:queryEmpConfigs>[\r][\n]"
+16:16:34.367 [main] DEBUG org.apache.http.wire -  >> "         <!--Optional:-->[\r][\n]"
+16:16:34.367 [main] DEBUG org.apache.http.wire -  >> "         <arg0>[\r][\n]"
+16:16:34.367 [main] DEBUG org.apache.http.wire -  >> "            <id>1</id>[\r][\n]"
+16:16:34.367 [main] DEBUG org.apache.http.wire -  >> "         </arg0>[\r][\n]"
+16:16:34.367 [main] DEBUG org.apache.http.wire -  >> "      </dm:queryEmpConfigs>[\r][\n]"
+16:16:34.367 [main] DEBUG org.apache.http.wire -  >> "   </soapenv:Body>[\r][\n]"
+16:16:34.367 [main] DEBUG org.apache.http.wire -  >> "</soapenv:Envelope>"
+16:16:35.296 [main] DEBUG org.apache.http.wire -  << "HTTP/1.1 200 [\r][\n]"
+16:16:35.300 [main] DEBUG org.apache.http.wire -  << "Accept: text/xml, text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2[\r][\n]"
+16:16:35.301 [main] DEBUG org.apache.http.wire -  << "SOAPAction: ""[\r][\n]"
+16:16:35.301 [main] DEBUG org.apache.http.wire -  << "Content-Type: text/xml;charset=utf-8[\r][\n]"
+16:16:35.301 [main] DEBUG org.apache.http.wire -  << "Content-Length: 419[\r][\n]"
+16:16:35.302 [main] DEBUG org.apache.http.wire -  << "Date: Fri, 23 Dec 2016 10:46:35 GMT[\r][\n]"
+16:16:35.302 [main] DEBUG org.apache.http.wire -  << "[\r][\n]"
+16:16:35.304 [main] DEBUG o.a.h.i.conn.DefaultClientConnection - Receiving response: HTTP/1.1 200 
+16:16:35.304 [main] DEBUG org.apache.http.headers - << HTTP/1.1 200 
+16:16:35.304 [main] DEBUG org.apache.http.headers - << Accept: text/xml, text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2
+16:16:35.305 [main] DEBUG org.apache.http.headers - << SOAPAction: ""
+16:16:35.306 [main] DEBUG org.apache.http.headers - << Content-Type: text/xml;charset=utf-8
+16:16:35.306 [main] DEBUG org.apache.http.headers - << Content-Length: 419
+16:16:35.306 [main] DEBUG org.apache.http.headers - << Date: Fri, 23 Dec 2016 10:46:35 GMT
+16:16:35.313 [main] DEBUG o.a.h.impl.client.DefaultHttpClient - Connection can be kept alive indefinitely
+16:16:35.338 [main] DEBUG c.j.r.i.RequestSpecificationImpl$RestAssuredHttpBuilder - Parsing response as: text/xml;charset=utf-8
+16:16:35.338 [main] DEBUG c.j.r.i.RequestSpecificationImpl$RestAssuredHttpBuilder - Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+16:16:35.370 [main] DEBUG org.apache.http.wire -  << "<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"><SOAP-ENV:Header/><SOAP-ENV:Body><ns3:queryEmpConfigsResponse xmlns:ns3="http://dm.xml.soap.sample.com/"><return><address>Sec49</address><city>BNDA</city><email>r1@gmail.com</email><firstName>Roo6</firstName><id>1</id><lastName>L</lastName><mobile>644681423</mobile></return></ns3:queryEmpConfigsResponse></SOAP-ENV:Body></SOAP-ENV:Envelope>"
+16:16:35.371 [main] DEBUG o.a.h.i.c.BasicClientConnectionManager - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@42a9e5d1
+16:16:35.372 [main] DEBUG o.a.h.i.c.BasicClientConnectionManager - Connection can be kept alive indefinitely
+
+***********************************************************************************************************************

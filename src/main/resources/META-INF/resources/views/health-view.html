@@ -1,0 +1,57 @@
+    
+  <div class="col-sm-12 col-md-12 border" ng-if="response">
+    <div class="alert alert-success" role="alert" ng-if="response.status == 'UP'">Status: {{response.status}}</div>
+    <div class="alert alert-danger" role="alert" ng-if="response.status != 'UP'">Status: {{response.status}}</div>
+  
+	<table class="table table-hover table-condensed">
+	    <tr>
+	        <th>Service</th>
+	        <th>Status</th>
+	        <th>Error</th>
+	        <th>Other</th>
+	    </tr>
+	    <tr class="" ng-if="response.services" ng-repeat="svc in response.services">
+	        <td>{{svc.servicename}}</td>
+	        <td>
+	        <div ng-switch="svc.status">
+			    <div ng-switch-when="UP"><span class="label label-success">{{svc.status}}</span></div>
+			    <div ng-switch-when="DOWN"><span class="label label-danger">{{svc.status}}</span></div>
+			    <div ng-switch-default><span class="label label-warning">{{svc.status}}</span></div>
+			</div> 
+	        
+	        <!-- 
+	         <div ng-if="svc.status==UP">
+	            
+	         </div>
+	         <div ng-else-if="svc.status==DOWN">
+	            
+	         </div>
+	         <div ng-else>
+	            
+	         </div>
+	         
+	          -->
+	         
+	        </td>
+	        <td>{{svc.error}}</td>
+	        <td>
+	          <div ng-if="svc.params"  ng-repeat="p in svc.params">
+	        	{{p.name}} --- {{p.value}}</br>
+	          </div>
+	        </td>
+	    </tr>
+	    <tr ng-if="!response.services" class="error">
+	        <td colspan="6">
+	            Services to report health on
+	        </td>
+	    </tr>
+	</table>
+  </div>
+  <div class="col-sm-12 col-md-12 border" ng-if="!response">
+      <div class="alert alert-info" role="alert" ng-if="loading">Loading health information...</div>
+      <div class="alert alert-danger" role="alert" ng-if="!loading">No JSON response from service</div>
+  </div>
+
+<BR></BR>
+<BR></BR>
+<BR></BR>

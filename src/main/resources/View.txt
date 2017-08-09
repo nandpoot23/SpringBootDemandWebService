@@ -1,0 +1,274 @@
+***********************************************************************************************************************
+
+Default port to start:- 6062
+
+Soap Web Service URL:- http://localhost:6062/DmService/1.0.wsdl
+
+Rest Web Service URL:- http://localhost:6062/api/dmCustomer/v1
+
+Swagger URL:- http://localhost:6062/swagger-ui.html 
+
+Post method:-
+
+http://localhost:6062/api/dmCustomer/v1/empConfig
+http://localhost:6062/api/dmCustomer/v1/empConfigAddress
+
+***********************************************************************************************************************
+
+Actuator:-
+
+http://localhost:6062/health
+http://localhost:6062/info
+http://localhost:6062/metrics
+http://localhost:6062/trace
+http://localhost:6062/mappings
+
+After changing the actuator port use below.
+
+User name:- admin 
+Password:- secret
+
+http://localhost:8091/actuator/info
+http://localhost:8091/actuator/health
+http://localhost:8091/actuator/metrics
+http://localhost:8091/actuator/trace
+
+***********************************************************************************************************************
+
+e2e property:- 
+
+-Dspring.profiles.active=dm-local / -Dspring.profiles.active=dm-xxx
+
+***********************************************************************************************************************
+
+moco server:- 
+
+-Dspring.config.location=moco-override.properties
+
+***********************************************************************************************************************
+
+time zone:- 
+
+-Dspring.cloud.config.label=develop -Duser.timezone=America/New_York
+
+***********************************************************************************************************************
+
+Token.json:- 
+
+{"access_token":"tokenfortesting","token_type":"Bearer","expires_in":7200}
+
+***********************************************************************************************************************
+
+Profiler (For DEV):-
+
+-Dspring.profiles.active=dm-dev 
+-Desp.config.server.password=compaq23
+-Desp.config.server.username=config_client 
+-Dspring.cloud.config.uri=https://dmconfigserver.ula.app.cloud.gopal.net 
+-Dspring.cloud.config.label=develop
+
+***********************************************************************************************************************
+
+Profiler (For QA):- 
+
+-Dspring.profiles.active=dm-qa 
+-Desp.config.server.password=compaq14 
+-Desp.config.server.username=config_client 
+-Dspring.cloud.config.uri=https://dmconfigserver.ula.app.cloud.gopal.net 
+-Dspring.cloud.config.label=develop
+
+***********************************************************************************************************************
+
+Run different profile from local:-
+
+QA
+
+-Dspring.profiles.active=gsp-qa 
+-Desp.config.server.password=fdsS32FFFdfjhls!!! 
+-Desp.config.server.username=config_client 
+-Dspring.cloud.config.uri=https://gspconfigserver.ula.app.cloud.gopal.net 
+-Dspring.cloud.config.label=develop -Duser.timezone=America/New_York
+
+***********************************************************************************************************************
+
+DEV
+
+-Dspring.profiles.active=gsp-dev 
+-Desp.config.server.password=fdsS32FFFdfjhls!!! 
+-Desp.config.server.username=config_client 
+-Dspring.cloud.config.uri=https://gspconfigserver.ula.app.cloud.gopal.net 
+-Dspring.cloud.config.label=develop
+
+***********************************************************************************************************************
+
+INT
+
+-Dspring.profiles.active=gsp-int 
+-Desp.config.server.password=fdsS32FFFdfjhls!!! 
+-Desp.config.server.username=config_client 
+-Dspring.cloud.config.uri=https://gspconfigserver.ula.app.cloud.gopal.net 
+-Dspring.cloud.config.label=develop
+
+***********************************************************************************************************************
+
+PRD G1
+
+-Dspring.profiles.active=gsp-prd-g1 
+-Desp.config.server.password=fdsas7da7aradskhdfkd0as7ga!!! 
+-Desp.config.server.username=config_client 
+-Doracle.jdbc.Trace=true
+-Dspring.cloud.config.uri=https://gspconfigserver-prd.g1.app.cloud.gopal.net 
+-Dspring.cloud.config.label=develop
+
+***********************************************************************************************************************
+
+PRD G2
+
+-Dspring.profiles.active=gsp-prd-g2 
+-Desp.config.server.password=fdsas7da7aradskhdfkd0as7ga!!! 
+-Desp.config.server.username=config_client 
+-Dspring.cloud.config.uri=https://gspconfigserver-prd.g2.app.cloud.gopal.net 
+-Dspring.cloud.config.label=develop
+
+***********************************************************************************************************************
+
+Eclipse configuration:-
+
+-Dspring.liveBeansView.mbeanDomain
+-Dcom.sun.management.jmxremote
+-Dcom.sun.management.jmxremote.port=9843
+-Dcom.sun.management.jmxremote.authenticate=false
+-Dcom.sun.management.jmxremote.ssl=false
+
+// will be add when we want to run the contract & functional test.
+-Dspring.config.location=moco-override.properties
+
+// will be add when we want to run the e2e test.
+-Dspring.profiles.active=dm-local
+
+***********************************************************************************************************************
+
+Eclipse Builder:-
+
+<buildCommand>
+<name>org.eclipse.jdt.core.javabuilder</name>
+<arguments>
+</arguments>
+</buildCommand>
+
+***********************************************************************************************************************
+
+Sample Header:-
+
+headers.add("SourceSystemId", "dm");
+headers.add("SourceSystemUserId", "dmgrand");
+headers.add("SourceServerId", "grand");
+headers.add("trackingId", "Dm_1423"); 
+
+***********************************************************************************************************************
+
+Sonar Server:- 
+
+D:\Sonar\sonarqube-4.5.1\sonarqube-4.5.1\bin\windows-x86-64
+
+***********************************************************************************************************************
+
+cleaning:- 
+
+C:\Users\mlahariya\AppData\Local\Temp 
+
+***********************************************************************************************************************
+
+Gradle:-
+
+gradlew clean build --refresh-dependencies
+gradle clean --refresh-dependencies build
+gradle clean pitest
+gradle tasks
+gradle test
+gradle bootRun
+gradlew functionalTest
+gradlew contractTest
+gradlew performanceTest
+gradle publish
+gradle assemble
+gradle sonarRunner
+gradlew sonarRunner
+gradlew contractTest
+gradlew functionalTest
+gradlew performanceTest
+
+gradlew clean build --refresh-dependencies functionalTest
+gradlew clean build --refresh-dependencies contractTest
+gradlew clean build --refresh-dependencies performanceTest
+
+***********************************************************************************************************************
+
+manifest.yml
+---------------
+applications:
+- name: dm-service
+  memory: 2048M
+  instances: 1
+  path: ./build/libs/dm-service-0.0.1.jar
+  buildpack: java_buildpack_v2_6
+  timeout: 180
+  services:
+   - Services_log
+  env:
+    JAVA_OPTS: -Djava.security.egd=file:///dev/urandom
+
+***********************************************************************************************************************
+
+Sample URL:-
+
+http://localhost:8080/CustomerService/15.09
+https://met-gsp-dev.able.gopal.com/CustomerService/15.09
+https://gsp-qa.cable.gopal.com:443/CustomerService/15.09
+https://customer-service-dev.u1.app.cloud.gopal.net/CustomerService/15.09
+https://customer-service-qa.u1.app.cloud.gopal.net/CustomerService/15.09
+https://customer-service-int.u1.app.cloud.gopal.net/CustomerService/15.09
+
+***********************************************************************************************************************
+
+Integration Test:- gradle integrationTest
+
+After running the above command we can see the reports inside the below location as a html page.
+inside the build folder it creates a folder named integration-test-results.
+
+D:\project\development\SpringBootDemandWebService\build\integration-test-results
+
+***********************************************************************************************************************
+
+Junit Test:-
+
+When run the above command, it first run all the junit test & generates a report as html page on below location.
+inside the build folder it creates a folder named reports. 
+
+D:\project\development\SpringBootDemandWebService\build\reports\tests
+
+***********************************************************************************************************************
+
+E2E Test:- (via command prompt)
+
+It is functional when we up the instance manually ie. first run the app via eclipse then 
+type below commands on cmd to execute the e2eTest task.
+
+gradle e2eTest -Dspring.profiles.active=dm-local
+gradle -Dspring.profiles.active=dm-local e2eTest
+
+gradle e2eTest -Dspring.profiles.active=dm-local --info
+gradle e2eTest -Dspring.profiles.active=dm-local --debug
+
+***********************************************************************************************************************
+
+Run:-
+
+E2e:- First run the application instance then run as JUnit test with -Dspring.profiles.active=dm-local.
+Contract:- First run the application instance with moco-server.properties then run as Junit test.
+Functional:- First run the application instance with moco-server.properties then run as Junit test.
+Integration:- Direct run as Junit test, no need the up the application instance.
+
+Only integration test, e2e test, junit test are functional via gradle task, rest all are not working via command prompt.
+
+***********************************************************************************************************************

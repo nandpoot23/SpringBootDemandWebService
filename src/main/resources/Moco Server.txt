@@ -1,0 +1,109 @@
+***********************************************************************************************************************
+
+Moco is an Enterprise Integration Response/Request Testing Tool.
+
+Mock Server is, In the simplest sense, as the name suggests, it a storage of responses to which your application expects 
+thereby eliminating the need to reach out to the actual, unreliable service.
+
+1.Moco is an easy setup stub framework.
+
+2.Latest Release is 0.11.0
+
+3.Integration, especially based on HTTP protocol, e.g. web service, REST etc, is wildly used in most of our development.
+
+4.In the old days, we just deployed another WAR to an application server, e.g. Jetty or Tomcat etc. As we all know, it's 
+so boring to develop a WAR and deploy it to any application server, even if we use an embeded server. And the WAR needs 
+to be reassembled even if we just want to change a little bit.
+
+5.Write your own configuration file to describe your Moco server & run Moco HTTP server with the configuration file.
+
+6.We have several ways to use Moco. One is API, which you can use in your unit test. The other is that run Moco as 
+standalone. Currently, you put all your configuration in JSON file.
+
+***********************************************************************************************************************
+
+On the other hand, Moco has several different ways to integrate with some tools: Maven plugin, Gradle plugin and 
+shell support.
+
+Maven :-
+<dependency>
+  <groupId>com.github.dreamhead</groupId>
+  <artifactId>moco-core</artifactId>
+  <version>0.11.0</version>
+</dependency>
+
+Gradle :-
+repositories {
+  mavenCentral()
+}
+
+dependencies {
+  testCompile(
+    "com.github.dreamhead:moco-core:0.11.0",
+  )
+}
+
+***********************************************************************************************************************
+
+7.HTTPS is also a mainstream usage for HTTP protocol. Moco supports HTTPS as well. The main difference in API is that 
+a certificate is required for HTTPS. On the other hand, httpsServer should be used.
+
+8.Socket is a common integration channel. There is only content available in socket.
+final SocketServer server = socketServer(12306);
+
+9.Moco provides JUnit integration to simplify the use of Moco in JUnit.
+
+10.Moco makes use of Test Rule in JUnit to simplify JUnit integration. MocoJunitRunner provides several ways to run 
+Moco server as Test Rule, which can start Moco server before your test and stop after the test.
+
+***********************************************************************************************************************
+
+There are three important concepts in this wrapper: request matcher, response hander, and resource.
+
+Request matcher:- sits in the when clause, used to match against requests that server received, once request matched, 
+moco server will respond.
+
+Response handler:- sits in the respond clause, used to define which should be responded to client once request matched.
+
+Resource:- any thing which can be matched against or any thing which can be send back to client could be considered as 
+a resource.
+
+***********************************************************************************************************************
+
+Moco, an open source tool created by Zheng Ye, is an "Easy Setup Stub Server" for testing network endpoints. 
+Essentially, all you need to write are two lines of code and you'll have your own HTTP server set up for simple 
+request/response testing.
+
+MocoHttpServer server = httpserver(50404);
+server.response("howdy");
+
+***********************************************************************************************************************
+
+11.Integrating test cases along with your applications can wreak havoc on the build process. A different approach is 
+usually required for testing integration points on your enterprise applications and today I came across a nifty open 
+source tool that can possibly help alleviate some of that difficulty.
+
+12.“MOCO originated from the pain of enterprise program delivery”, Ye explained during his presentation of MOCO. 
+“A good engineer should always employ the principle of putting simplicity first. MOCO has taken the first step, 
+after the unspeakable pains of complicated integration, to eliminate the complexity”.
+
+13.It’s simple and easy to integrate. With these independent operations, our development can continue unhindered, 
+even if there is no response from an external web server.
+
+14.Integrates well with Maven and Gradle. With Maven and Gradle APIs for our service, we can use MOCO easily in tests 
+like Concordion.
+20.It makes our test run faster. As tests show, the time required for single interface request/responses was reduced 
+by 50%, and programmers were able to save their time from waiting for CI status.
+
+15.Moco is a lightweight stub framework that has made it’s way into the Trial section of ThoughtWorks Technology Radar.
+It is extremely easy to get a handle on the framework and it is flexible enough for you to manipulate the tool. Granted, 
+because of tight security, my scenario was definitely Moco’s edge case from hell, so it required a fair bit of fine 
+tuning within the code itself to get it to execute what we needed it to do. But that is the beauty of having an 
+open-sourced framework available on GitHub.
+
+16.Moco is written in Java and has been released with a Scala wrapper. But if you’re using it off the shelf, you don’t 
+actually need any Java knowledge to operate it. This is why good documentation is so crucial! Setting it up is fairly 
+simple. Using the Playback function and the Failover function. We can easily create a self initializing server that is 
+able to reach out to the actual server if the response has been updated which will then be saved to the mock response set.
+
+***********************************************************************************************************************

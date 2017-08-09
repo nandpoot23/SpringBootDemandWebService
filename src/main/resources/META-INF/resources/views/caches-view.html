@@ -1,0 +1,42 @@
+    
+    <!-- 
+    
+    private String cacheName;
+	private long requestCount;
+	private long hitCount;
+	private long missCount;
+	private double hitRate;
+	private long size;	   
+     -->
+    
+  <div class="col-xs-16 col-md-12 border">
+	<table class="table table-hover table-condensed">
+	    <tr>
+	        <th>Cache Name</th>
+	        <th>Total Requests</th>
+	        <th>Hit</th>
+	        <th>Miss</th>
+	        <th>Hit Rate</th>
+	        <th>Size</th>
+	    </tr>
+	    <tr class="" ng-if="responseList" ng-repeat="metric in responseList">
+	        <td>{{metric.cacheName}}</td>
+	        <td>{{metric.requestCount}}</td>
+	        <td>{{metric.hitCount}}</td>
+	        <td>{{metric.missCount}}</td>
+	        <td>{{metric.hitRate}}</td>
+	        <td>{{metric.size}}</td>
+	    </tr>
+	    <tr ng-if="!responseList" class="error">
+	        <td colspan="6">
+	            No Cache Details
+	        </td>
+	    </tr>
+	</table>
+    </div>
+  
+   
+
+<BR></BR>
+<BR></BR>
+<BR></BR>

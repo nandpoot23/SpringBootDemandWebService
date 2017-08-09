@@ -1,0 +1,12 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:dm="http://dm.xml.soap.sample.com/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <dm:selectAllEmpAllData>
+         <!--Optional:-->
+         <arg0>
+            <!--Optional:-->
+            <address>sec49</address>
+         </arg0>
+      </dm:selectAllEmpAllData>
+   </soapenv:Body>
+</soapenv:Envelope>

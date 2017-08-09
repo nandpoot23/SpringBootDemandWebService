@@ -1,0 +1,123 @@
+***********************************************************************************************************************
+
+20:38:46.768 [main] DEBUG o.a.h.i.c.BasicClientConnectionManager - Get connection for route {}->http://localhost:6062
+20:38:46.786 [main] DEBUG o.a.h.i.c.DefaultClientConnectionOperator - Connecting to localhost:6062
+20:38:46.810 [main] DEBUG o.a.h.c.protocol.RequestAddCookies - CookieSpec selected: ignoreCookies
+20:38:46.813 [main] DEBUG o.a.h.c.protocol.RequestAuthCache - Auth cache not set in the context
+20:38:46.814 [main] DEBUG o.a.h.c.p.RequestTargetAuthentication - Target auth state: UNCHALLENGED
+20:38:46.815 [main] DEBUG o.a.h.c.p.RequestProxyAuthentication - Proxy auth state: UNCHALLENGED
+20:38:46.815 [main] DEBUG o.a.h.impl.client.DefaultHttpClient - Attempt 1 to execute request
+20:38:46.816 [main] DEBUG o.a.h.i.conn.DefaultClientConnection - Sending request: POST /DmService/1.0 HTTP/1.1
+20:38:46.816 [main] DEBUG org.apache.http.wire -  >> "POST /DmService/1.0 HTTP/1.1[\r][\n]"
+20:38:46.818 [main] DEBUG org.apache.http.wire -  >> "Accept: */*[\r][\n]"
+20:38:46.818 [main] DEBUG org.apache.http.wire -  >> "Content-Type: text/xml; charset=ISO-8859-1[\r][\n]"
+20:38:46.818 [main] DEBUG org.apache.http.wire -  >> "Content-Length: 395[\r][\n]"
+20:38:46.819 [main] DEBUG org.apache.http.wire -  >> "Host: localhost:6062[\r][\n]"
+20:38:46.819 [main] DEBUG org.apache.http.wire -  >> "Connection: Keep-Alive[\r][\n]"
+20:38:46.819 [main] DEBUG org.apache.http.wire -  >> "User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_60)[\r][\n]"
+20:38:46.819 [main] DEBUG org.apache.http.wire -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
+20:38:46.819 [main] DEBUG org.apache.http.wire -  >> "[\r][\n]"
+20:38:46.819 [main] DEBUG org.apache.http.headers - >> POST /DmService/1.0 HTTP/1.1
+20:38:46.820 [main] DEBUG org.apache.http.headers - >> Accept: */*
+20:38:46.821 [main] DEBUG org.apache.http.headers - >> Content-Type: text/xml; charset=ISO-8859-1
+20:38:46.821 [main] DEBUG org.apache.http.headers - >> Content-Length: 395
+20:38:46.821 [main] DEBUG org.apache.http.headers - >> Host: localhost:6062
+20:38:46.823 [main] DEBUG org.apache.http.headers - >> Connection: Keep-Alive
+20:38:46.824 [main] DEBUG org.apache.http.headers - >> User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_60)
+20:38:46.825 [main] DEBUG org.apache.http.headers - >> Accept-Encoding: gzip,deflate
+20:38:46.826 [main] DEBUG org.apache.http.wire -  >> "<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:dm="http://dm.xml.soap.sample.com/">[\r][\n]"
+20:38:46.826 [main] DEBUG org.apache.http.wire -  >> "   <soapenv:Header/>[\r][\n]"
+20:38:46.826 [main] DEBUG org.apache.http.wire -  >> "   <soapenv:Body>[\r][\n]"
+20:38:46.826 [main] DEBUG org.apache.http.wire -  >> "      <dm:selectAllEmpAllData>[\r][\n]"
+20:38:46.826 [main] DEBUG org.apache.http.wire -  >> "         <!--Optional:-->[\r][\n]"
+20:38:46.827 [main] DEBUG org.apache.http.wire -  >> "         <arg0>[\r][\n]"
+20:38:46.827 [main] DEBUG org.apache.http.wire -  >> "            <!--Optional:-->[\r][\n]"
+20:38:46.883 [main] DEBUG org.apache.http.wire -  >> "            <address>sec49</address>[\r][\n]"
+20:38:46.884 [main] DEBUG org.apache.http.wire -  >> "         </arg0>[\r][\n]"
+20:38:46.884 [main] DEBUG org.apache.http.wire -  >> "      </dm:selectAllEmpAllData>[\r][\n]"
+20:38:46.884 [main] DEBUG org.apache.http.wire -  >> "   </soapenv:Body>[\r][\n]"
+20:38:46.884 [main] DEBUG org.apache.http.wire -  >> "</soapenv:Envelope>"
+20:38:46.960 [main] DEBUG org.apache.http.wire -  << "HTTP/1.1 200 [\r][\n]"
+20:38:46.962 [main] DEBUG org.apache.http.wire -  << "Accept: text/xml, text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2[\r][\n]"
+20:38:46.962 [main] DEBUG org.apache.http.wire -  << "SOAPAction: ""[\r][\n]"
+20:38:46.962 [main] DEBUG org.apache.http.wire -  << "Content-Type: text/xml;charset=utf-8[\r][\n]"
+20:38:46.962 [main] DEBUG org.apache.http.wire -  << "Content-Length: 951[\r][\n]"
+20:38:46.962 [main] DEBUG org.apache.http.wire -  << "Date: Thu, 22 Dec 2016 15:08:46 GMT[\r][\n]"
+20:38:46.962 [main] DEBUG org.apache.http.wire -  << "[\r][\n]"
+20:38:46.963 [main] DEBUG o.a.h.i.conn.DefaultClientConnection - Receiving response: HTTP/1.1 200 
+20:38:46.963 [main] DEBUG org.apache.http.headers - << HTTP/1.1 200 
+20:38:46.963 [main] DEBUG org.apache.http.headers - << Accept: text/xml, text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2
+20:38:46.963 [main] DEBUG org.apache.http.headers - << SOAPAction: ""
+20:38:46.963 [main] DEBUG org.apache.http.headers - << Content-Type: text/xml;charset=utf-8
+20:38:46.963 [main] DEBUG org.apache.http.headers - << Content-Length: 951
+20:38:46.963 [main] DEBUG org.apache.http.headers - << Date: Thu, 22 Dec 2016 15:08:46 GMT
+20:38:46.966 [main] DEBUG o.a.h.impl.client.DefaultHttpClient - Connection can be kept alive indefinitely
+20:38:46.995 [main] DEBUG c.j.r.i.RequestSpecificationImpl$RestAssuredHttpBuilder - Parsing response as: text/xml;charset=utf-8
+20:38:46.995 [main] DEBUG c.j.r.i.RequestSpecificationImpl$RestAssuredHttpBuilder - Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+20:38:47.031 [main] DEBUG org.apache.http.wire -  << "<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"><SOAP-ENV:Header/><SOAP-ENV:Body><ns3:selectAllEmpAllDataResponse xmlns:ns3="http://dm.xml.soap.sample.com/"><return><address>Sec49</address><city>BNDA</city><email>r1@gmail.com</email><firstName>Roo6</firstName><id>1</id><lastName>L</lastName><mobile>644681423</mobile></return><return><address>Sec49</address><city>BNDA</city><email>r2@gmail.com</email><firstName>Manul</firstName><id>2</id><lastName>Lsdfs</lastName><mobile>644681424</mobile></return><return><address>Sec49</address><city>BNDA</city><email>r3@gmail.com</email><firstName>Ruchi</firstName><id>3</id><lastName>Rawat</lastName><mobile>644681425</mobile></return><return><address>Sec49</address><city>BNDA</city><email>r4@gmail.com</email><firstName>Shraddha</firstName><id>6</id><lastName>L</lastName><mobile>644681426</mobile></return></ns3:selectAllEmpAllDataResponse></SOAP-ENV:Body></SOAP-ENV:Envelope>"
+20:38:47.033 [main] DEBUG o.a.h.i.c.BasicClientConnectionManager - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@7e7b159b
+20:38:47.033 [main] DEBUG o.a.h.i.c.BasicClientConnectionManager - Connection can be kept alive indefinitely
+
+***********************************************************************************************************************
+
+E2E via cmd as gradle task:- please up the application instance via STS then run.
+
+D:\project\development\SpringBootDemandWebService>gradle -Dspring.profiles.active=dm-local e2eTest
+Spring Boot plugin's support for Gradle 2.4 is deprecated. Please upgrade to Gradle 2.9 or later.
+:compileJava UP-TO-DATE
+:compileGroovy UP-TO-DATE
+:compileScala UP-TO-DATE
+:processResources UP-TO-DATE
+:classes UP-TO-DATE
+:compileE2eTestJava UP-TO-DATE
+:compileE2eTestGroovy UP-TO-DATE
+:compileE2eTestScala UP-TO-DATE
+:processE2eTestResources UP-TO-DATE
+:e2eTestClasses UP-TO-DATE
+:compileTestJava UP-TO-DATE
+:compileTestGroovy UP-TO-DATE
+:compileTestScala UP-TO-DATE
+:processTestResources UP-TO-DATE
+:testClasses UP-TO-DATE
+:e2eTest
+
+BUILD SUCCESSFUL
+
+Total time: 15.733 secs
+
+D:\project\development\SpringBootDemandWebService>
+
+***********************************************************************************************************************
+
+D:\project\development\SpringBootDemandWebService>gradle e2eTest -Dspring.profiles.active=dm-local
+Spring Boot plugin's support for Gradle 2.4 is deprecated. Please upgrade to Gradle 2.9 or later.
+:compileJava UP-TO-DATE
+:compileGroovy UP-TO-DATE
+:compileScala UP-TO-DATE
+:processResources
+:classes
+:compileE2eTestJava
+:compileE2eTestGroovy UP-TO-DATE
+:compileE2eTestScala UP-TO-DATE
+:processE2eTestResources UP-TO-DATE
+:e2eTestClasses
+:compileTestJava
+:compileTestGroovy UP-TO-DATE
+:compileTestScala UP-TO-DATE
+:processTestResources UP-TO-DATE
+:testClasses
+:e2eTest
+
+BUILD SUCCESSFUL
+
+Total time: 17.06 secs
+
+D:\project\development\SpringBootDemandWebService>
+
+***********************************************************************************************************************
+
+E2E Reports:-
+
+D:\project\development\SpringBootDemandWebService\build\e2e-test-results
+
+***********************************************************************************************************************

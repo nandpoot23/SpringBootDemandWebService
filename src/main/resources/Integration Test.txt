@@ -1,0 +1,331 @@
+***********************************************************************************************************************
+
+D:\project\development\SpringBootDemandWebService>gradle integrationTest
+> Configuring > 0/1 projects > root projectSpring Boot plugin's support for Gradle 2.4 is deprecated. Please upgrade to Gradle 2.9 or later.
+> Building 0%UP-TO-DATEeJava > Resolving dependencies ':compile':compileJava
+:compileGroovy UP-TO-DATE
+:compileScala UP-TO-DATE
+:processResources
+:classes
+:compileTestJava
+:compileTestGroovy UP-TO-DATE
+:compileTestScala UP-TO-DATE
+:processTestResources UP-TO-DATE
+:testClasses
+:compileIntegrationTestJava
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+:compileIntegrationTestGroovy UP-TO-DATE
+:compileIntegrationTestScala UP-TO-DATE
+:processIntegrationTestResources UP-TO-DATE
+:integrationTestClasses
+> Building 88% > :test
+
+17:53:23.001 [Test worker] DEBUG o.s.t.c.s.DependencyInjectionTestExecutionListener - Performing dependency injection for test context [[DefaultTe
+stContext@6c4426a2 testClass = SpringBootDemandSoapIntegrationTest, testInstance = com.example.dm.customer.integration.SpringBootDemandSoapIntegration
+Test@7fbf12ec, testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@9beb695 testClass = SpringBoot
+DemandSoapIntegrationTest, locations = '{}', classes = '{class com.example.spring.boot.rest.app.SpringBootDemandWebServiceApplication}', contextInitia
+lizerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.WebIntegrationT
+est=true}', contextCustomizers = set[org.springframework.test.context.web.socket.MockServerContainerContextCustomizer@6ad58f72, org.springframework.bo
+ot.test.context.filter.ExcludeFilterContextCustomizer@5a263d4c, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframe
+work.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCu
+stomizerFactory$Customizer@7337b1ef], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.SpringApplicationContextLoa
+der', parent = [null]]]].
+17:53:23.001 [Test worker] DEBUG o.s.t.c.c.DefaultCacheAwareContextLoaderDelegate - Retrieved ApplicationContext from cache with key [[WebMergedCo
+ntextConfiguration@9beb695 testClass = SpringBootDemandSoapIntegrationTest, locations = '{}', classes = '{class com.example.spring.boot.rest.app.Sprin
+gBootDemandWebServiceApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties
+= '{org.springframework.boot.test.WebIntegrationTest=true}', contextCustomizers = set[org.springframework.test.context.web.socket.MockServerContainerC
+ontextCustomizer@6ad58f72, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@5a263d4c, org.springframework.boot.test.mock.mo
+ckito.MockitoContextCustomizer@0, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.
+test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@7337b1ef], resourceBasePath = 'src/main/webapp', contextLoader = 'org.spri
+ngframework.boot.test.SpringApplicationContextLoader', parent = [null]]]
+17:53:23.001 [Test worker] DEBUG o.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@5228
+c914 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 2, missCount = 1]
+17:53:23.003 [Test worker] DEBUG o.s.b.f.annotation.InjectionMetadata - Processing injected element of bean 'com.example.dm.customer.integration.S
+pringBootDemandSoapIntegrationTest': AutowiredFieldElement for private com.example.spring.boot.soap.controller.SpringBootDemandSoapServiceController c
+om.example.dm.customer.integration.SpringBootDemandSoapIntegrationTest.dmSoapServiceController
+17:53:23.005 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'DmSoapServiceController'
+17:53:23.005 [Test worker] DEBUG o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - Autowiring by type from bean name 'com.example.dm.customer.integ
+ration.SpringBootDemandSoapIntegrationTest' to bean named 'DmSoapServiceController'
+17:53:23.005 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.transacti
+on.config.internalTransactionAdvisor'
+17:53:23.005 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.aop.aspec
+tj.AspectJPointcutAdvisor#0'
+17:53:23.006 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.transacti
+on.config.internalTransactionAdvisor'
+17:53:23.006 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.aop.aspec
+tj.AspectJPointcutAdvisor#0'
+Running test: Test testQueryEmpConfigs(com.example.dm.customer.integration.SpringBootDemandSoapIntegrationTest)
+
+com.example.dm.customer.integration.SpringBootDemandSoapIntegrationTest > testQueryEmpConfigs STANDARD_OUT
+    17:53:23.009 [Test worker] INFO  c.e.s.b.s.c.SpringBootDemandSoapServiceController - SOAP Request Received Of queryCustomer com.sample.soap.xml.dm
+.QueryEmpConfigs@2d8e6337
+    17:53:23.010 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'ValidationAspect'
+    17:53:23.010 [Test worker] DEBUG o.a.c.b.converters.BooleanConverter - Setting default value: false
+    17:53:23.011 [Test worker] DEBUG o.a.c.b.converters.BooleanConverter - Converting 'Boolean' value 'false' to type 'Boolean'
+    17:53:23.011 [Test worker] DEBUG o.a.c.b.converters.BooleanConverter -     No conversion required, value is already a Boolean
+    17:53:23.011 [Test worker] DEBUG o.a.c.b.converters.ByteConverter - Setting default value: 0
+    17:53:23.011 [Test worker] DEBUG o.a.c.b.converters.ByteConverter - Converting 'Integer' value '0' to type 'Byte'
+    17:53:23.011 [Test worker] DEBUG o.a.c.b.converters.ByteConverter -     Converted to Byte value '0'
+    17:53:23.011 [Test worker] DEBUG o.a.c.b.c.CharacterConverter - Setting default value:
+    17:53:23.011 [Test worker] DEBUG o.a.c.b.c.CharacterConverter - Converting 'Character' value ' ' to type 'Character'
+    17:53:23.011 [Test worker] DEBUG o.a.c.b.c.CharacterConverter -     No conversion required, value is already a Character
+    17:53:23.011 [Test worker] DEBUG o.a.c.b.converters.DoubleConverter - Setting default value: 0
+    17:53:23.011 [Test worker] DEBUG o.a.c.b.converters.DoubleConverter - Converting 'Integer' value '0' to type 'Double'
+    17:53:23.011 [Test worker] DEBUG o.a.c.b.converters.DoubleConverter -     Converted to Double value '0.0'
+    17:53:23.011 [Test worker] DEBUG o.a.c.b.converters.FloatConverter - Setting default value: 0
+    17:53:23.011 [Test worker] DEBUG o.a.c.b.converters.FloatConverter - Converting 'Integer' value '0' to type 'Float'
+    17:53:23.011 [Test worker] DEBUG o.a.c.b.converters.FloatConverter -     Converted to Float value '0.0'
+    17:53:23.011 [Test worker] DEBUG o.a.c.b.converters.IntegerConverter - Setting default value: 0
+    17:53:23.011 [Test worker] DEBUG o.a.c.b.converters.IntegerConverter - Converting 'Integer' value '0' to type 'Integer'
+    17:53:23.011 [Test worker] DEBUG o.a.c.b.converters.IntegerConverter -     No conversion required, value is already a Integer
+    17:53:23.011 [Test worker] DEBUG o.a.c.b.converters.LongConverter - Setting default value: 0
+    17:53:23.012 [Test worker] DEBUG o.a.c.b.converters.LongConverter - Converting 'Integer' value '0' to type 'Long'
+    17:53:23.012 [Test worker] DEBUG o.a.c.b.converters.LongConverter -     Converted to Long value '0'
+    17:53:23.012 [Test worker] DEBUG o.a.c.b.converters.ShortConverter - Setting default value: 0
+    17:53:23.012 [Test worker] DEBUG o.a.c.b.converters.ShortConverter - Converting 'Integer' value '0' to type 'Short'
+    17:53:23.012 [Test worker] DEBUG o.a.c.b.converters.ShortConverter -     Converted to Short value '0'
+    17:53:23.012 [Test worker] DEBUG o.a.c.b.c.BigDecimalConverter - Setting default value: 0.0
+    17:53:23.012 [Test worker] DEBUG o.a.c.b.c.BigDecimalConverter - Converting 'BigDecimal' value '0.0' to type 'BigDecimal'
+    17:53:23.012 [Test worker] DEBUG o.a.c.b.c.BigDecimalConverter -     No conversion required, value is already a BigDecimal
+    17:53:23.012 [Test worker] DEBUG o.a.c.b.c.BigIntegerConverter - Setting default value: 0
+    17:53:23.012 [Test worker] DEBUG o.a.c.b.c.BigIntegerConverter - Converting 'BigInteger' value '0' to type 'BigInteger'
+    17:53:23.012 [Test worker] DEBUG o.a.c.b.c.BigIntegerConverter -     No conversion required, value is already a BigInteger
+    17:53:23.012 [Test worker] DEBUG o.a.c.b.converters.BooleanConverter - Setting default value: false
+    17:53:23.012 [Test worker] DEBUG o.a.c.b.converters.BooleanConverter - Converting 'Boolean' value 'false' to type 'Boolean'
+    17:53:23.012 [Test worker] DEBUG o.a.c.b.converters.BooleanConverter -     No conversion required, value is already a Boolean
+    17:53:23.012 [Test worker] DEBUG o.a.c.b.converters.ByteConverter - Setting default value: 0
+    17:53:23.012 [Test worker] DEBUG o.a.c.b.converters.ByteConverter - Converting 'Integer' value '0' to type 'Byte'
+    17:53:23.012 [Test worker] DEBUG o.a.c.b.converters.ByteConverter -     Converted to Byte value '0'
+    17:53:23.012 [Test worker] DEBUG o.a.c.b.c.CharacterConverter - Setting default value:
+    17:53:23.013 [Test worker] DEBUG o.a.c.b.c.CharacterConverter - Converting 'Character' value ' ' to type 'Character'
+    17:53:23.013 [Test worker] DEBUG o.a.c.b.c.CharacterConverter -     No conversion required, value is already a Character
+    17:53:23.013 [Test worker] DEBUG o.a.c.b.converters.DoubleConverter - Setting default value: 0
+    17:53:23.013 [Test worker] DEBUG o.a.c.b.converters.DoubleConverter - Converting 'Integer' value '0' to type 'Double'
+    17:53:23.013 [Test worker] DEBUG o.a.c.b.converters.DoubleConverter -     Converted to Double value '0.0'
+    17:53:23.013 [Test worker] DEBUG o.a.c.b.converters.FloatConverter - Setting default value: 0
+    17:53:23.013 [Test worker] DEBUG o.a.c.b.converters.FloatConverter - Converting 'Integer' value '0' to type 'Float'
+    17:53:23.013 [Test worker] DEBUG o.a.c.b.converters.FloatConverter -     Converted to Float value '0.0'
+    17:53:23.013 [Test worker] DEBUG o.a.c.b.converters.IntegerConverter - Setting default value: 0
+    17:53:23.013 [Test worker] DEBUG o.a.c.b.converters.IntegerConverter - Converting 'Integer' value '0' to type 'Integer'
+    17:53:23.013 [Test worker] DEBUG o.a.c.b.converters.IntegerConverter -     No conversion required, value is already a Integer
+    17:53:23.013 [Test worker] DEBUG o.a.c.b.converters.LongConverter - Setting default value: 0
+    17:53:23.013 [Test worker] DEBUG o.a.c.b.converters.LongConverter - Converting 'Integer' value '0' to type 'Long'
+    17:53:23.013 [Test worker] DEBUG o.a.c.b.converters.LongConverter -     Converted to Long value '0'
+    17:53:23.013 [Test worker] DEBUG o.a.c.b.converters.ShortConverter - Setting default value: 0
+    17:53:23.013 [Test worker] DEBUG o.a.c.b.converters.ShortConverter - Converting 'Integer' value '0' to type 'Short'
+    17:53:23.013 [Test worker] DEBUG o.a.c.b.converters.ShortConverter -     Converted to Short value '0'
+    17:53:23.013 [Test worker] DEBUG o.a.c.b.converters.StringConverter - Setting default value:
+    17:53:23.013 [Test worker] DEBUG o.a.c.b.converters.StringConverter - Converting 'String' value '' to type 'String'
+    17:53:23.014 [Test worker] DEBUG o.a.c.b.converters.ArrayConverter - Setting default value: [Z@7e30e78c
+    17:53:23.014 [Test worker] DEBUG o.a.c.b.converters.ArrayConverter - Converting 'boolean[]' value '[Z@7e30e78c' to type 'boolean[]'
+    17:53:23.014 [Test worker] DEBUG o.a.c.b.converters.ArrayConverter -     No conversion required, value is already a boolean[]
+    17:53:23.014 [Test worker] DEBUG o.a.c.b.converters.ArrayConverter - Setting default value: [B@2079b4a6
+    17:53:23.014 [Test worker] DEBUG o.a.c.b.converters.ArrayConverter - Converting 'byte[]' value '[B@2079b4a6' to type 'byte[]'
+    17:53:23.014 [Test worker] DEBUG o.a.c.b.converters.ArrayConverter -     No conversion required, value is already a byte[]
+    17:53:23.014 [Test worker] DEBUG o.a.c.b.converters.ArrayConverter - Setting default value: [C@3283d2ae
+    17:53:23.014 [Test worker] DEBUG o.a.c.b.converters.ArrayConverter - Converting 'char[]' value '[C@3283d2ae' to type 'char[]'
+    17:53:23.014 [Test worker] DEBUG o.a.c.b.converters.ArrayConverter -     No conversion required, value is already a char[]
+    17:53:23.014 [Test worker] DEBUG o.a.c.b.converters.ArrayConverter - Setting default value: [D@4054f7f7
+    17:53:23.014 [Test worker] DEBUG o.a.c.b.converters.ArrayConverter - Converting 'double[]' value '[D@4054f7f7' to type 'double[]'
+    17:53:23.014 [Test worker] DEBUG o.a.c.b.converters.ArrayConverter -     No conversion required, value is already a double[]
+    17:53:23.014 [Test worker] DEBUG o.a.c.b.converters.ArrayConverter - Setting default value: [F@392174f6
+    17:53:23.014 [Test worker] DEBUG o.a.c.b.converters.ArrayConverter - Converting 'float[]' value '[F@392174f6' to type 'float[]'
+    17:53:23.014 [Test worker] DEBUG o.a.c.b.converters.ArrayConverter -     No conversion required, value is already a float[]
+    17:53:23.014 [Test worker] DEBUG o.a.c.b.converters.ArrayConverter - Setting default value: [I@54102bf0
+    17:53:23.014 [Test worker] DEBUG o.a.c.b.converters.ArrayConverter - Converting 'int[]' value '[I@54102bf0' to type 'int[]'
+    17:53:23.015 [Test worker] DEBUG o.a.c.b.converters.ArrayConverter -     No conversion required, value is already a int[]
+    17:53:23.015 [Test worker] DEBUG o.a.c.b.converters.ArrayConverter - Setting default value: [J@78aa857e
+    17:53:23.015 [Test worker] DEBUG o.a.c.b.converters.ArrayConverter - Converting 'long[]' value '[J@78aa857e' to type 'long[]'
+    17:53:23.015 [Test worker] DEBUG o.a.c.b.converters.ArrayConverter -     No conversion required, value is already a long[]
+    17:53:23.015 [Test worker] DEBUG o.a.c.b.converters.ArrayConverter - Setting default value: [S@1fa62ed3
+    17:53:23.015 [Test worker] DEBUG o.a.c.b.converters.ArrayConverter - Converting 'short[]' value '[S@1fa62ed3' to type 'short[]'
+    17:53:23.015 [Test worker] DEBUG o.a.c.b.converters.ArrayConverter -     No conversion required, value is already a short[]
+    17:53:23.015 [Test worker] DEBUG o.a.c.b.converters.ArrayConverter - Setting default value: [Ljava.math.BigDecimal;@2d127f15
+    17:53:23.015 [Test worker] DEBUG o.a.c.b.converters.ArrayConverter - Converting 'BigDecimal[]' value '[Ljava.math.BigDecimal;@2d127f15' to type 'B
+igDecimal[]'
+    17:53:23.015 [Test worker] DEBUG o.a.c.b.converters.ArrayConverter -     No conversion required, value is already a BigDecimal[]
+    17:53:23.015 [Test worker] DEBUG o.a.c.b.converters.ArrayConverter - Setting default value: [Ljava.math.BigInteger;@78088eec
+    17:53:23.015 [Test worker] DEBUG o.a.c.b.converters.ArrayConverter - Converting 'BigInteger[]' value '[Ljava.math.BigInteger;@78088eec' to type 'B
+igInteger[]'
+    17:53:23.015 [Test worker] DEBUG o.a.c.b.converters.ArrayConverter -     No conversion required, value is already a BigInteger[]
+    17:53:23.015 [Test worker] DEBUG o.a.c.b.converters.ArrayConverter - Setting default value: [Ljava.lang.Boolean;@54a565e6
+    17:53:23.015 [Test worker] DEBUG o.a.c.b.converters.ArrayConverter - Converting 'Boolean[]' value '[Ljava.lang.Boolean;@54a565e6' to type 'Boolean
+[]'
+    17:53:23.016 [Test worker] DEBUG o.a.c.b.converters.ArrayConverter -     No conversion required, value is already a Boolean[]
+    17:53:23.016 [Test worker] DEBUG o.a.c.b.converters.ArrayConverter - Setting default value: [Ljava.lang.Byte;@7adb1917
+    17:53:23.016 [Test worker] DEBUG o.a.c.b.converters.ArrayConverter - Converting 'Byte[]' value '[Ljava.lang.Byte;@7adb1917' to type 'Byte[]'
+    17:53:23.016 [Test worker] DEBUG o.a.c.b.converters.ArrayConverter -     No conversion required, value is already a Byte[]
+    17:53:23.016 [Test worker] DEBUG o.a.c.b.converters.ArrayConverter - Setting default value: [Ljava.lang.Character;@440f2b8e
+    17:53:23.016 [Test worker] DEBUG o.a.c.b.converters.ArrayConverter - Converting 'Character[]' value '[Ljava.lang.Character;@440f2b8e' to type 'Cha
+racter[]'
+    17:53:23.016 [Test worker] DEBUG o.a.c.b.converters.ArrayConverter -     No conversion required, value is already a Character[]
+    17:53:23.016 [Test worker] DEBUG o.a.c.b.converters.ArrayConverter - Setting default value: [Ljava.lang.Double;@78ccb20d
+    17:53:23.016 [Test worker] DEBUG o.a.c.b.converters.ArrayConverter - Converting 'Double[]' value '[Ljava.lang.Double;@78ccb20d' to type 'Double[]'
+
+    17:53:23.016 [Test worker] DEBUG o.a.c.b.converters.ArrayConverter -     No conversion required, value is already a Double[]
+    17:53:23.016 [Test worker] DEBUG o.a.c.b.converters.ArrayConverter - Setting default value: [Ljava.lang.Float;@7b972a7
+    17:53:23.016 [Test worker] DEBUG o.a.c.b.converters.ArrayConverter - Converting 'Float[]' value '[Ljava.lang.Float;@7b972a7' to type 'Float[]'
+    17:53:23.016 [Test worker] DEBUG o.a.c.b.converters.ArrayConverter -     No conversion required, value is already a Float[]
+    17:53:23.016 [Test worker] DEBUG o.a.c.b.converters.ArrayConverter - Setting default value: [Ljava.lang.Integer;@2508c0e6
+    17:53:23.016 [Test worker] DEBUG o.a.c.b.converters.ArrayConverter - Converting 'Integer[]' value '[Ljava.lang.Integer;@2508c0e6' to type 'Integer
+[]'
+    17:53:23.016 [Test worker] DEBUG o.a.c.b.converters.ArrayConverter -     No conversion required, value is already a Integer[]
+    17:53:23.016 [Test worker] DEBUG o.a.c.b.converters.ArrayConverter - Setting default value: [Ljava.lang.Long;@1866dc92
+    17:53:23.016 [Test worker] DEBUG o.a.c.b.converters.ArrayConverter - Converting 'Long[]' value '[Ljava.lang.Long;@1866dc92' to type 'Long[]'
+    17:53:23.016 [Test worker] DEBUG o.a.c.b.converters.ArrayConverter -     No conversion required, value is already a Long[]
+    17:53:23.017 [Test worker] DEBUG o.a.c.b.converters.ArrayConverter - Setting default value: [Ljava.lang.Short;@5a74949
+    17:53:23.017 [Test worker] DEBUG o.a.c.b.converters.ArrayConverter - Converting 'Short[]' value '[Ljava.lang.Short;@5a74949' to type 'Short[]'
+    17:53:23.017 [Test worker] DEBUG o.a.c.b.converters.ArrayConverter -     No conversion required, value is already a Short[]
+    17:53:23.017 [Test worker] DEBUG o.a.c.b.converters.ArrayConverter - Setting default value: [Ljava.lang.String;@49472f10
+    17:53:23.017 [Test worker] DEBUG o.a.c.b.converters.ArrayConverter - Converting 'String[]' value '[Ljava.lang.String;@49472f10' to type 'String[]'
+
+    17:53:23.017 [Test worker] DEBUG o.a.c.b.converters.ArrayConverter -     No conversion required, value is already a String[]
+    17:53:23.017 [Test worker] DEBUG o.a.c.b.converters.ArrayConverter - Setting default value: [Ljava.lang.Class;@2aabc92e
+    17:53:23.017 [Test worker] DEBUG o.a.c.b.converters.ArrayConverter - Converting 'Class[]' value '[Ljava.lang.Class;@2aabc92e' to type 'Class[]'
+    17:53:23.017 [Test worker] DEBUG o.a.c.b.converters.ArrayConverter -     No conversion required, value is already a Class[]
+    17:53:23.017 [Test worker] DEBUG o.a.c.b.converters.ArrayConverter - Setting default value: [Ljava.util.Date;@48702a5
+    17:53:23.017 [Test worker] DEBUG o.a.c.b.converters.ArrayConverter - Converting 'Date[]' value '[Ljava.util.Date;@48702a5' to type 'Date[]'
+    17:53:23.017 [Test worker] DEBUG o.a.c.b.converters.ArrayConverter -     No conversion required, value is already a Date[]
+    17:53:23.017 [Test worker] DEBUG o.a.c.b.converters.ArrayConverter - Setting default value: [Ljava.util.Calendar;@3b55fe7d
+    17:53:23.017 [Test worker] DEBUG o.a.c.b.converters.ArrayConverter - Converting 'Calendar[]' value '[Ljava.util.Calendar;@3b55fe7d' to type 'Calen
+dar[]'
+    17:53:23.017 [Test worker] DEBUG o.a.c.b.converters.ArrayConverter -     No conversion required, value is already a Calendar[]
+    17:53:23.017 [Test worker] DEBUG o.a.c.b.converters.ArrayConverter - Setting default value: [Ljava.io.File;@4b9a79a8
+    17:53:23.017 [Test worker] DEBUG o.a.c.b.converters.ArrayConverter - Converting 'java.io.File[]' value '[Ljava.io.File;@4b9a79a8' to type 'java.io
+.File[]'
+    17:53:23.018 [Test worker] DEBUG o.a.c.b.converters.ArrayConverter -     No conversion required, value is already a java.io.File[]
+    17:53:23.018 [Test worker] DEBUG o.a.c.b.converters.ArrayConverter - Setting default value: [Ljava.sql.Date;@3f0c2b4c
+    17:53:23.018 [Test worker] DEBUG o.a.c.b.converters.ArrayConverter - Converting 'java.sql.Date[]' value '[Ljava.sql.Date;@3f0c2b4c' to type 'java.
+sql.Date[]'
+    17:53:23.018 [Test worker] DEBUG o.a.c.b.converters.ArrayConverter -     No conversion required, value is already a java.sql.Date[]
+    17:53:23.018 [Test worker] DEBUG o.a.c.b.converters.ArrayConverter - Setting default value: [Ljava.sql.Time;@3229422
+    17:53:23.018 [Test worker] DEBUG o.a.c.b.converters.ArrayConverter - Converting 'java.sql.Time[]' value '[Ljava.sql.Time;@3229422' to type 'java.s
+ql.Time[]'
+    17:53:23.018 [Test worker] DEBUG o.a.c.b.converters.ArrayConverter -     No conversion required, value is already a java.sql.Time[]
+    17:53:23.018 [Test worker] DEBUG o.a.c.b.converters.ArrayConverter - Setting default value: [Ljava.sql.Timestamp;@1790342d
+    17:53:23.018 [Test worker] DEBUG o.a.c.b.converters.ArrayConverter - Converting 'java.sql.Timestamp[]' value '[Ljava.sql.Timestamp;@1790342d' to t
+ype 'java.sql.Timestamp[]'
+    17:53:23.018 [Test worker] DEBUG o.a.c.b.converters.ArrayConverter -     No conversion required, value is already a java.sql.Timestamp[]
+    17:53:23.018 [Test worker] DEBUG o.a.c.b.converters.ArrayConverter - Setting default value: [Ljava.net.URL;@f5f484e
+    17:53:23.018 [Test worker] DEBUG o.a.c.b.converters.ArrayConverter - Converting 'java.net.URL[]' value '[Ljava.net.URL;@f5f484e' to type 'java.net
+.URL[]'
+    17:53:23.018 [Test worker] DEBUG o.a.c.b.converters.ArrayConverter -     No conversion required, value is already a java.net.URL[]
+    17:53:23.019 [Test worker] DEBUG c.e.s.b.rest.service.DmServiceImpl - MyServiceImpl::queryEmpConfigs  id : 1
+    17:53:23.019 [Test worker] DEBUG o.s.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+    17:53:23.038 [Test worker] DEBUG o.s.jdbc.datasource.DataSourceUtils - Returning JDBC Connection to DataSource
+    17:53:23.038 [Test worker] DEBUG c.e.s.boot.rest.dao.DmDbServiceImpl -  Query for queryEmpConfigs : select * from employee where id = ?
+    17:53:23.038 [Test worker] DEBUG c.e.s.b.s.c.SpringBootDemandSoapServiceController - Returning Response for queryEmpConfigs
+    *************1
+    *************Roo6
+    *************L
+    *************Sec49
+    *************BNDA
+    *************r1@gmail.com
+    *************644681423
+    17:53:23.041 [Test worker] DEBUG o.s.t.c.s.AbstractDirtiesContextTestExecutionListener - After test method: context [DefaultTestContext@6c4426a2 t
+estClass = SpringBootDemandSoapIntegrationTest, testInstance = com.example.dm.customer.integration.SpringBootDemandSoapIntegrationTest@7fbf12ec, testM
+ethod = testQueryEmpConfigs@SpringBootDemandSoapIntegrationTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@9
+beb695 testClass = SpringBootDemandSoapIntegrationTest, locations = '{}', classes = '{class com.example.spring.boot.rest.app.SpringBootDemandWebServic
+eApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframew
+ork.boot.test.WebIntegrationTest=true}', contextCustomizers = set[org.springframework.test.context.web.socket.MockServerContainerContextCustomizer@6ad
+58f72, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@5a263d4c, org.springframework.boot.test.mock.mockito.MockitoContext
+Customizer@0, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.w
+eb.servlet.WebDriverContextCustomizerFactory$Customizer@7337b1ef], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.tes
+t.SpringApplicationContextLoader', parent = [null]]], class annotated with @DirtiesContext [false] with mode [null], method annotated with @DirtiesCon
+text [false] with mode [null].
+
+com.example.dm.customer.integration.SpringBootDemandSoapIntegrationTest STANDARD_OUT
+    17:53:23.041 [Test worker] DEBUG o.s.t.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.exampl
+e.dm.customer.integration.SpringBootDemandSoapIntegrationTest]
+    17:53:23.042 [Test worker] DEBUG o.s.t.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation
+.SystemProfileValueSource] for class [com.example.dm.customer.integration.SpringBootDemandSoapIntegrationTest]
+    17:53:23.042 [Test worker] DEBUG o.s.test.util.ReflectionTestUtils - Getting field 'mergedContextConfiguration' from target object [[DefaultTestCo
+ntext@6c4426a2 testClass = SpringBootDemandSoapIntegrationTest, testInstance = com.example.dm.customer.integration.SpringBootDemandSoapIntegrationTest
+@12c31b6f, testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@9beb695 testClass = SpringBootDema
+ndSoapIntegrationTest, locations = '{}', classes = '{class com.example.spring.boot.rest.app.SpringBootDemandWebServiceApplication}', contextInitialize
+rClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.WebIntegrationTest=
+true}', contextCustomizers = set[org.springframework.test.context.web.socket.MockServerContainerContextCustomizer@6ad58f72, org.springframework.boot.t
+est.context.filter.ExcludeFilterContextCustomizer@5a263d4c, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework
+.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustom
+izerFactory$Customizer@7337b1ef], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.SpringApplicationContextLoader'
+, parent = [null]]]] or target class [class org.springframework.test.context.support.DefaultTestContext]
+    17:53:23.042 [Test worker] DEBUG o.s.test.util.ReflectionTestUtils - Setting field 'propertySourceProperties' of type [null] on target object [[We
+bMergedContextConfiguration@9beb695 testClass = SpringBootDemandSoapIntegrationTest, locations = '{}', classes = '{class com.example.spring.boot.rest.
+app.SpringBootDemandWebServiceApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourcePr
+operties = '{org.springframework.boot.test.WebIntegrationTest=true}', contextCustomizers = set[org.springframework.test.context.web.socket.MockServerC
+ontainerContextCustomizer@6ad58f72, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@5a263d4c, org.springframework.boot.tes
+t.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframew
+ork.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@7337b1ef], resourceBasePath = 'src/main/webapp', contextLoader =
+'org.springframework.boot.test.SpringApplicationContextLoader', parent = [null]]] or target class [class org.springframework.test.context.web.WebMerge
+dContextConfiguration] to value [[Ljava.lang.String;@63328d34]
+    17:53:23.042 [Test worker] DEBUG o.s.t.c.s.DependencyInjectionTestExecutionListener - Performing dependency injection for test context [[DefaultTe
+stContext@6c4426a2 testClass = SpringBootDemandSoapIntegrationTest, testInstance = com.example.dm.customer.integration.SpringBootDemandSoapIntegration
+Test@12c31b6f, testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@9beb695 testClass = SpringBoot
+DemandSoapIntegrationTest, locations = '{}', classes = '{class com.example.spring.boot.rest.app.SpringBootDemandWebServiceApplication}', contextInitia
+lizerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.WebIntegrationT
+est=true}', contextCustomizers = set[org.springframework.test.context.web.socket.MockServerContainerContextCustomizer@6ad58f72, org.springframework.bo
+ot.test.context.filter.ExcludeFilterContextCustomizer@5a263d4c, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframe
+work.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCu
+stomizerFactory$Customizer@7337b1ef], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.SpringApplicationContextLoa
+der', parent = [null]]]].
+    17:53:23.043 [Test worker] DEBUG o.s.t.c.c.DefaultCacheAwareContextLoaderDelegate - Retrieved ApplicationContext from cache with key [[WebMergedCo
+ntextConfiguration@9beb695 testClass = SpringBootDemandSoapIntegrationTest, locations = '{}', classes = '{class com.example.spring.boot.rest.app.Sprin
+gBootDemandWebServiceApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties
+= '{org.springframework.boot.test.WebIntegrationTest=true}', contextCustomizers = set[org.springframework.test.context.web.socket.MockServerContainerC
+ontextCustomizer@6ad58f72, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@5a263d4c, org.springframework.boot.test.mock.mo
+ckito.MockitoContextCustomizer@0, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.
+test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@7337b1ef], resourceBasePath = 'src/main/webapp', contextLoader = 'org.spri
+ngframework.boot.test.SpringApplicationContextLoader', parent = [null]]]
+    17:53:23.043 [Test worker] DEBUG o.springframework.test.context.cache - Spring test ApplicationContext cache statistics: [DefaultContextCache@5228
+c914 size = 1, maxSize = 32, parentContextCount = 0, hitCount = 3, missCount = 1]
+    17:53:23.043 [Test worker] DEBUG o.s.b.f.annotation.InjectionMetadata - Processing injected element of bean 'com.example.dm.customer.integration.S
+pringBootDemandSoapIntegrationTest': AutowiredFieldElement for private com.example.spring.boot.soap.controller.SpringBootDemandSoapServiceController c
+om.example.dm.customer.integration.SpringBootDemandSoapIntegrationTest.dmSoapServiceController
+    17:53:23.043 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'DmSoapServiceController'
+Running test: Test testSelectAllEmpAllData(com.example.dm.customer.integration.SpringBootDemandSoapIntegrationTest)
+
+com.example.dm.customer.integration.SpringBootDemandSoapIntegrationTest > testSelectAllEmpAllData STANDARD_OUT
+    17:53:23.046 [Test worker] INFO  c.e.s.b.s.c.SpringBootDemandSoapServiceController - SOAP Request Received Of selectAllEmpAddrData com.sample.soap
+.xml.dm.SelectAllEmpAllData@2664f9c4
+    17:53:23.046 [Test worker] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Returning cached instance of singleton bean 'ValidationAspect'
+    17:53:23.081 [Test worker] DEBUG c.e.s.b.rest.service.DmServiceImpl - MyServiceImpl::selectAllEmpAllData  address of your sector : Sec49
+    17:53:23.123 [Test worker] DEBUG o.s.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+    17:53:23.126 [Test worker] DEBUG o.s.jdbc.datasource.DataSourceUtils - Returning JDBC Connection to DataSource
+    17:53:23.126 [Test worker] DEBUG c.e.s.boot.rest.dao.DmDbServiceImpl -  Query for selectAllEmpAllData : select * from employee where address = ?
+    17:53:23.126 [Test worker] DEBUG c.e.s.b.s.c.SpringBootDemandSoapServiceController - Returning Response for selectAllEmpAllData
+    17:53:23.128 [Test worker] DEBUG o.s.t.c.s.AbstractDirtiesContextTestExecutionListener - After test method: context [DefaultTestContext@6c4426a2 t
+estClass = SpringBootDemandSoapIntegrationTest, testInstance = com.example.dm.customer.integration.SpringBootDemandSoapIntegrationTest@12c31b6f, testM
+ethod = testSelectAllEmpAllData@SpringBootDemandSoapIntegrationTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfigurati
+on@9beb695 testClass = SpringBootDemandSoapIntegrationTest, locations = '{}', classes = '{class com.example.spring.boot.rest.app.SpringBootDemandWebSe
+rviceApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springfr
+amework.boot.test.WebIntegrationTest=true}', contextCustomizers = set[org.springframework.test.context.web.socket.MockServerContainerContextCustomizer
+@6ad58f72, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@5a263d4c, org.springframework.boot.test.mock.mockito.MockitoCon
+textCustomizer@0, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigu
+re.web.servlet.WebDriverContextCustomizerFactory$Customizer@7337b1ef], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot
+.test.SpringApplicationContextLoader', parent = [null]]], class annotated with @DirtiesContext [false] with mode [null], method annotated with @Dirtie
+sContext [false] with mode [null].
+
+com.example.dm.customer.integration.SpringBootDemandSoapIntegrationTest STANDARD_OUT
+    17:53:23.129 [Test worker] DEBUG o.s.t.c.s.AbstractDirtiesContextTestExecutionListener - After test class: context [DefaultTestContext@6c4426a2 te
+stClass = SpringBootDemandSoapIntegrationTest, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMe
+rgedContextConfiguration@9beb695 testClass = SpringBootDemandSoapIntegrationTest, locations = '{}', classes = '{class com.example.spring.boot.rest.app
+.SpringBootDemandWebServiceApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourcePrope
+rties = '{org.springframework.boot.test.WebIntegrationTest=true}', contextCustomizers = set[org.springframework.test.context.web.socket.MockServerCont
+ainerContextCustomizer@6ad58f72, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@5a263d4c, org.springframework.boot.test.m
+ock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework
+.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@7337b1ef], resourceBasePath = 'src/main/webapp', contextLoader = 'or
+g.springframework.boot.test.SpringApplicationContextLoader', parent = [null]]], class annotated with @DirtiesContext [false] with mode [null].
+
+BUILD SUCCESSFUL
+
+Total time: 2 mins 50.279 secs
+D:\project\development\SpringBootDemandWebService>
+
+***********************************************************************************************************************
+
+Integration Test Reports:-
+
+D:\project\development\SpringBootDemandWebService\build\integration-test-results
+
+***********************************************************************************************************************

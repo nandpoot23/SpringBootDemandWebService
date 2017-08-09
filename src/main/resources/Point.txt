@@ -1,0 +1,315 @@
+***********************************************************************************************************************
+
+This is the project based on micro-service which includes spring boot rest ws in support with soap ws. 
+
+Assemble:- 
+
+1.build.gradle
+2.application.properties
+3.Message.properties
+4.wsdl & generate artifacts (stub)
+5.PropertiesConfiguration
+6.SpringBoot Main Application
+7.Rest web service flow
+8.Soap web service flow
+9.Unit Test (mockito)
+
+***********************************************************************************************************************
+
+Enhancements:-
+
+1.Sonar 
+2.Swagger 
+3.Spring actuator 
+4.Validation via Aop 
+5.User defined exception (Rest, Soap)
+6.Logging 
+7.Mapping
+8.Moco server
+9.Gradle task (integration, e2e, contract, functional, performance)
+10.Github (.git ignore)
+11.Pivotal Cloud Foundry Deployment
+12.Documentation
+
+***********************************************************************************************************************
+
+Multiple kinds of test:-
+
+1.Contract Test
+2.Functional Test
+3.Performance Test
+4.Performance Test
+5.E2E Test
+6.Integration Test (Rest, Soap)
+
+***********************************************************************************************************************
+
+1.The 'sonar-runner' plugin has been deprecated and is scheduled to be removed in Gradle 3.0. please use the official 
+plugin from SonarQube (http://docs.sonarqube.org/display/SONAR/Analyzing+with+Gradle).
+
+BUILD SUCCESSFUL
+
+Total time: 2.747 secs
+
+2.gradle task
+
+D:\project\development\SpringBootDemandWebService>gradle task
+Spring Boot plugin's support for Gradle 2.4 is deprecated. Please upgrade to Gradle 2.9 or later.
+:tasks
+
+------------------------------------------------------------
+All tasks runnable from root project
+------------------------------------------------------------
+
+Application tasks
+-----------------
+bootRun - Run the project with support for auto-detecting main class and reloading static resources
+
+Build tasks
+-----------
+assemble - Assembles the outputs of this project.
+bootRepackage - Repackage existing JAR and WAR archives so that they can be executed from the command line using 'java -jar'
+build - Assembles and tests this project.
+buildDependents - Assembles and tests this project and all projects that depend on it.
+buildNeeded - Assembles and tests this project and all projects it depends on.
+classes - Assembles classes 'main'.
+contractTestClasses - Assembles classes 'contractTest'.
+e2eTestClasses - Assembles classes 'e2eTest'.
+integrationTestClasses - Assembles classes 'integrationTest'.
+jar - Assembles a jar archive containing the main classes.
+testClasses - Assembles classes 'test'.
+
+Build Setup tasks
+-----------------
+init - Initializes a new Gradle build. [incubating]
+
+Documentation tasks
+-------------------
+groovydoc - Generates Groovydoc API documentation for the main source code.
+javadoc - Generates Javadoc API documentation for the main source code.
+scaladoc - Generates Scaladoc for the main source code.
+
+Help tasks
+----------
+components - Displays the components produced by root project 'SpringBootDemandWebService'. [incubating]
+dependencies - Displays all dependencies declared in root project 'SpringBootDemandWebService'.
+dependencyInsight - Displays the insight into a specific dependency in root project 'SpringBootDemandWebService'.
+help - Displays a help message.
+model - Displays the configuration model of root project 'SpringBootDemandWebService'. [incubating]
+projects - Displays the sub-projects of root project 'SpringBootDemandWebService'.
+properties - Displays the properties of root project 'SpringBootDemandWebService'.
+tasks - Displays the tasks runnable from root project 'SpringBootDemandWebService'.
+
+IDE tasks
+---------
+cleanEclipse - Cleans all Eclipse files.
+eclipse - Generates all Eclipse files.
+
+Verification tasks
+------------------
+check - Runs all checks.
+clean - Deletes the build directory.
+test - Runs the unit tests.
+
+Other tasks
+-----------
+contractTest - Tests the contract aspects of service operations against Moco stubs and ensures the interface returns the expected fields.
+dependencyManagement
+e2eTest - Runs End to End Tests
+integrationTest
+jacocoTestReport
+scalaConsole - Starts a Scala REPL with the main runtime class path.
+scalaContractTestConsole - Starts a Scala REPL with the contractTest runtime class path.
+scalaE2eTestConsole - Starts a Scala REPL with the e2eTest runtime class path.
+scalaIntegrationTestConsole - Starts a Scala REPL with the integrationTest runtime class path.
+scalaTestConsole - Starts a Scala REPL with the test runtime class path.
+sonarRunner - Analyzes root project 'SpringBootDemandWebService' and its subprojects with Sonar Runner.
+wrapper
+
+Rules
+-----
+Pattern: clean<TaskName>: Cleans the output files of a task.
+Pattern: build<ConfigurationName>: Assembles the artifacts of a configuration.
+Pattern: upload<ConfigurationName>: Assembles and uploads the artifacts belonging to a configuration.
+
+To see all tasks and more detail, run gradle tasks --all
+
+To see more detail about a task, run gradle help --task <task>
+
+BUILD SUCCESSFUL
+
+3.gradle check
+
+D:\project\development\SpringBootDemandWebService>gradle check
+Spring Boot plugin's support for Gradle 2.4 is deprecated. Please upgrade to Gradle 2.9 or later.
+:compileJava UP-TO-DATE
+:compileGroovy UP-TO-DATE
+:compileScala UP-TO-DATE
+:processResources
+:classes
+:compileTestJava
+:compileTestGroovy UP-TO-DATE
+:compileTestScala UP-TO-DATE
+:processTestResources UP-TO-DATE
+:testClasses
+:test
+:check
+
+BUILD SUCCESSFUL
+
+***********************************************************************************************************************
+
+Hint :-
+
+1.Swagger
+
+http://swagger.io/getting-started/
+http://www.baeldung.com/swagger-2-documentation-for-spring-rest-api
+
+2.Gradle
+
+http://www.idanfridman.com/how-to-exclude-libraries-from-dependcies-using-gradle/
+
+3.Actuator
+
+https://spring.io/guides/gs/actuator-service/
+http://www.baeldung.com/spring-boot-actuators
+http://javabeat.net/spring-boot-actuator/
+https://github.com/spring-projects/spring-boot/blob/master/spring-boot-docs/src/main/asciidoc/production-ready-features.adoc
+https://github.com/spring-projects/spring-boot/tree/master/spring-boot-actuator
+http://www.tutorialspoint.com/articles/spring-boot-actuator-a-production-grade-feature-in-spring-boot
+http://www.dineshonjava.com/2016/08/spring-boot-actuator-complete-guide.html#.WGD3clN97ow
+
+4.Rest Template
+
+https://dzone.com/articles/how-use-spring-resttemplate-0
+http://www.baeldung.com/rest-template
+http://howtodoinjava.com/spring/spring-restful/spring-restful-client-resttemplate-example/
+
+5.Aop 
+
+http://docs.spring.io/spring/docs/current/spring-framework-reference/html/aop.html
+http://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/context/annotation/EnableAspectJAutoProxy.html
+https://www.mkyong.com/spring3/spring-aop-aspectj-annotation-example/
+https://blog.jayway.com/2015/09/08/defining-pointcuts-by-annotations/
+http://www.javatpoint.com/spring-aop-aspectj-annotation-example
+http://www.yegor256.com/2014/06/01/aop-aspectj-java-method-logging.html
+http://howtodoinjava.com/spring/spring-aop/spring-aop-aspectj-example-tutorial-using-annotation-config/
+http://www.journaldev.com/2583/spring-aop-example-tutorial-aspect-advice-pointcut-joinpoint-annotations
+http://stackoverflow.com/questions/4829088/java-aspect-oriented-programming-with-annotations
+http://www.concretepage.com/spring/spring-aop-aspectj-annotation-example-with-aspect-pointcut-before-after-around-afterreturning-afterthrowing-advice
+https://www.tutorialspoint.com/spring/aspectj_based_aop_appoach.htm
+http://javabeginnerstutorial.com/spring-framework-tutorial/spring-aopaspect-oriented-programming/
+http://howtodoinjava.com/spring-aop-tutorial/
+http://www.journaldev.com/2583/spring-aop-example-tutorial-aspect-advice-pointcut-joinpoint-annotations
+http://www.javatpoint.com/spring-aop-tutorial
+http://www.java2blog.com/2016/07/spring-aop-tutorial.html
+
+6.Wsdl
+
+https://www.tutorialspoint.com/wsdl/wsdl_types.htm
+http://www.w3schools.com/xml/xml_wsdl.asp
+http://crunchify.com/basic-wsdl-structure-understanding-wsdl-explained/
+https://www.predic8.com/wsdl-reading.htm
+http://tutorials.jenkov.com/wsdl/index.html
+http://www.skillbuilders.com/tutorials-v2/ads-wrapper.cfm?content=Web_Services_Overview/Web_Services_Technologies_Used/Web_Services_Technologies_Used.cfm&title=Web%20Services%20Tutorial%20|%20Introduction%20to%20SOAP,%20WSDL%20and%20UDDI&page=0
+http://www.dineshonjava.com/2013/05/introduction-to-wsdl.html#.WGt63lN97ow
+http://www.dineshonjava.com/2013/05/hello-world-example-wsdl-document.html#.WGtCXlN97ow
+http://www.ibm.com/developerworks/webservices/tutorials/ws-understand-web-services2/ws-understand-web-services2.html
+https://www.tutorialspoint.com/uddi/uddi_overview.htm
+https://coderanch.com/t/625764/certification/difference-wsimport-wsgen-command
+http://www.javajee.com/articles/jaxws-tools-wsimport-and-wsgen
+http://stackoverflow.com/questions/22894728/apt-vs-wsgen-vs-wsimport-confusion-on-what-to-use-when-and-why-not-to-use-the-o
+http://www.examclouds.com/java/web-services/wsimport-wsgen
+http://www.concretepage.com/webservices/how-run-wsgen-wsimport-jax-ws-web-services
+http://yadna04.blogspot.in/2015/12/difference-between-wsimport-and-wsgen.html
+https://malliktalksjava.in/2016/12/27/differences-between-wsimport-and-wsgen/
+http://download.oracle.com/otn_hosted_doc/jdeveloper/1012/web_services/ws_wsdlstructure.html
+https://lists.w3.org/Archives/Public/www-ws/2004Feb/0014.html
+http://tutorials.jenkov.com/wsdl/description.html
+https://docs.oracle.com/cd/E24329_01/web.1211/e24965/faults.htm#WSADV634
+https://coderanch.com/t/591835/java/Handle-SOAP-Fault-SOAP-based
+http://www.ibm.com/developerworks/library/ws-tip-jaxrpc/
+http://io.typepad.com/eben_hewitt_on_java/2009/07/using-soap-faults-and-exceptions-in-java-jaxws-web-services.html
+
+7.application.properties
+
+https://projects.spring.io/spring-boot/
+http://projects.spring.io/spring-ws/
+https://docs.spring.io/spring-boot/docs/current/reference/html/howto-properties-and-configuration.html
+http://stackoverflow.com/questions/31038250/setting-active-profile-and-config-location-from-command-line-in-spring-boot
+https://spring.io/guides/gs/producing-web-service/
+https://spring.io/guides/gs/consuming-web-service/
+http://docs.spring.io/spring-ws/site/reference/html/tutorial.html
+
+8.Soap Fault Exception
+
+http://memorynotfound.com/spring-ws-add-detail-soapfault-exception-handling/
+http://java.globinch.com/enterprise-java/web-services/jax-ws/jax-ws-exceptions-faults-annotation-exception-and-fault-handling-examples/
+http://io.typepad.com/eben_hewitt_on_java/2009/07/using-soap-faults-and-exceptions-in-java-jaxws-web-services.html
+http://stackoverflow.com/questions/13596260/how-to-throw-a-custom-fault-on-a-jax-ws-web-service
+
+9.Moco Server
+
+https://github.com/dreamhead/moco
+https://github.com/dreamhead/moco/blob/master/moco-doc/ReleaseNotes.md
+https://github.com/dreamhead/moco/blob/master/moco-doc/usage.md
+https://github.com/GarrettHeel/moco-maven-plugin
+https://github.com/silverjava/moco-gradle-plugin
+https://github.com/treppo/moco-scala
+https://dzone.com/articles/moco-enterprise-integration
+https://sevenhoursbehind.wordpress.com/2014/11/23/mock-servers-why-what-how/
+https://www.infoq.com/articles/testing-enterprise-integration
+https://github.com/azagniotov/stubby4j
+http://grepcode.com/project/repo1.maven.org/maven2/com.github.dreamhead/moco-core/
+http://grepcode.com/file/repo1.maven.org/maven2/com.github.dreamhead/moco-core/0.10.1/com/github/dreamhead/moco/Server.java
+https://www.thoughtworks.com/news/moco-wins-dukes-choice-award
+
+10.Multiple Test
+
+https://blog.jayway.com/2014/07/04/integration-testing-a-spring-boot-application/
+https://dzone.com/articles/spring-boot-and-scala
+http://batey.info/building-well-tested-applications-with.html
+https://moelholm.com/2016/10/22/spring-boot-separating-tests/
+
+11.Micro Services
+
+https://spring.io/blog/2015/07/14/microservices-with-spring
+https://spring.io/blog/2015/12/10/spring-boot-memory-performance
+https://github.com/jesperdj/spring-cloud-demo
+http://www.jesperdj.com/2016/06/18/modern-microservices-with-scala-spring-boot-and-spring-cloud/
+http://www.javaworld.com/article/2683277/architecture-scalability/what-microservices-architecture-really-means.html
+https://dzone.com/articles/spring-boot-creating
+https://zeroturnaround.com/rebellabs/why-spring-is-winning-the-microservices-game/
+http://blog.scottlogic.com/2016/06/13/code-reuse-in-microservices-architecture.html
+https://www.infoq.com/articles/boot-microservices
+https://plainoldobjects.com/2014/04/01/building-microservices-with-spring-boot-part1/
+https://jaxenter.com/performance-advantages-wso2-microservices-framework-for-java-2-0-to-spring-128340.html
+https://giantswarm.io/microservices/
+http://www.martinfowler.com/articles/microservices.html
+https://www.infoq.com/articles/microservices-intro
+https://www.quora.com/What-are-microservices
+http://odino.org/on-monoliths-service-oriented-architectures-and-microservices/
+https://www.nginx.com/blog/building-microservices-inter-process-communication/
+https://dzone.com/articles/microservices-in-practice-1
+
+12.Web Services
+
+https://www.tutorialspoint.com/webservices/what_are_web_services.htm
+http://www.service-architecture.com/articles/web-services/web_services_explained.html
+http://docs.oracle.com/javaee/6/tutorial/doc/gijvh.html
+http://www.w3schools.com/xml/xml_services.asp
+https://www.lynda.com/OData-tutorials/What-web-service/126131/145941-4.html
+http://www.javatpoint.com/web-services-tutorial
+http://www.javatpoint.com/soap-web-services
+https://alexkeim.wordpress.com/2008/02/16/wsdl-a-quick-walkthrough/
+http://tutorials.jenkov.com/wsdl/overview.html
+http://blog.smartbear.com/apis/understanding-soap-and-rest-basics/
+http://www.java2blog.com/2013/03/web-service-tutorial.html
+http://www.java2blog.com/2016/06/web-services-interview-questions.html
+http://www.java2blog.com/2013/03/soap-web-service-tutorial.html
+http://www.java2blog.com/2013/04/restful-web-service-tutorial.html
+http://www.java2blog.com/2016/06/difference-between-soap-and-rest-web-services.html
+http://www.javatpoint.com/restful-web-services
+
+***********************************************************************************************************************

@@ -1,0 +1,29 @@
+[
+  {
+    "request": {
+      "method": "GET",
+      "uri": {
+        "match": "/hello"
+      }
+    },
+    "response": {
+      "status": 200,
+      "text": "Am up!"
+    }
+  },
+  {
+    "request": {
+      "method": "POST",
+      "uri": {
+        "match": "/as/token.oauth2"
+      }
+    },
+    "response": {
+      "status": 200,
+      "headers": {
+        "Content-Type": "application/json;charset=UTF-8"
+      },
+      "file": "src/testCommon/resources/token.json"
+    }
+  }
+]

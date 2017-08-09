@@ -1,0 +1,17 @@
+dm-local:
+  dmServiceEndpoint: "http://localhost:6062"
+
+dm-dev:
+  dmServiceEndpoint: "https://dm-service-dev.app.cloud.com"
+  
+dm-qa:
+  dmServiceEndpoint: "https://dm-service-qa.app.cloud.com"  
+
+dm-int:
+  dmServiceEndpoint: "https://dm-service-int.app.cloud.com"
+
+dm-stg-g1:
+  dmServiceEndpoint: "https://dm-service-stg.app.cloud.com"
+
+dm-prd:
+  dmServiceEndpoint: "https://dm-service-prd.app.cloud.com"
